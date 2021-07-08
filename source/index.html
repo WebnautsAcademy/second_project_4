@@ -38,16 +38,22 @@
       </div>
     </header>
     <main>
-      <section class="start__screen">
+      <section class="start">
         <div class="container">
-          <h1 class="start__screen-title title">Бизнес-Консалтинг</h1>
-          <img src="img/main.jpg" width="608" height="569" alt="main image" />
-          <p class="start__screen-text text"></p>
+          <h1 class="start__title title">Бизнес-Консалтинг</h1>
+          <img
+            src="img/main.jpg"
+            width="608"
+            height="569"
+            alt="main image"
+            class="start__img"
+          />
+          <p class="start__text text"></p>
         </div>
       </section>
       <section class="about">
         <p class="about__info info">Обо мне</p>
-        <img src="img/about.jpg" alt="about image" />
+        <img src="img/about.jpg" alt="about image" class="about__img" />
         <p class="about__text text">
           По их почти единодушному мнению, самоактуализация откровенна. Толпа
           понимает объект. Действие точно аннигилирует генезис. Самонаблюдение,
@@ -56,7 +62,11 @@
           точно аннигилирует генезис. Самонаблюдение, конечно, притягивает
           филосовский гомеостаз.
         </p>
-        <img src="img/about-life.jpg" alt="image my life" />
+        <img
+          src="img/about-life.jpg"
+          alt="image my life"
+          class="about__img-life"
+        />
         <button class="about__view">Смотреть</button>
       </section>
       <section class="main">
@@ -96,6 +106,7 @@
           width="615"
           height="671"
           alt="gallery image"
+          class="gallery__img"
         />
       </section>
       <section class="project">
@@ -106,6 +117,7 @@
             width="200"
             height="36"
             alt="project logo"
+            class="project__logo"
           />
         </div>
         <p class="project__text text">
@@ -127,6 +139,7 @@
             width="615"
             height="346"
             alt="large image"
+            class="review__img"
           />
           <div class="review__link">Смотреть отзыв</div>
           <p class="review__info">Уилл Смит</p>
@@ -138,6 +151,7 @@
             width="292"
             height="227"
             alt="middle image"
+            class="review__img"
           />
           <p class="review__info">Марк Аврелий</p>
           <p class="review__info-text">Римский император, философ</p>
@@ -148,6 +162,7 @@
             width="232"
             height="181"
             alt="smaller image"
+            class="review__img"
           />
           <p class="review__info">Дядя Ваня</p>
           <p class="review__info-text">Обувщик</p>
@@ -163,9 +178,15 @@
             бизнеса
           </p>
           <ul class="footer__list">
-            <li class="footer__link"><a href="#">E-mail</a></li>
-            <li class="footer__link"><a href="#">Facebook</a></li>
-            <li class="footer__link"><a href="#">Telegram</a></li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">E-mail</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Facebook</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Telegram</a>
+            </li>
           </ul>
         </div>
       </div>
