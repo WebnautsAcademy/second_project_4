@@ -3,23 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>academy project</title>
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
-          Fro
           <img
             src="img/logo.png"
-            width="13"
-            height="13"
+            width="46"
+            height="19"
             alt="logo image"
             class="logo__img"
           />
         </a>
         <button class="header__switch">
-          <img src="img/day.png" width="24" height="24" alt="day mode" />
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprite.svg#day"></use>
+          </svg>
+          <!-- <svg
+            class="header__switch-day"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 18C10.4087 18 8.88258 17.3679 7.75736 16.2426C6.63214 15.1174 6 13.5913 6 12C6 10.4087 6.63214 8.88258 7.75736 7.75736C8.88258 6.63214 10.4087 6 12 6C13.5913 6 15.1174 6.63214 16.2426 7.75736C17.3679 8.88258 18 10.4087 18 12C18 13.5913 17.3679 15.1174 16.2426 16.2426C15.1174 17.3679 13.5913 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.515 4.929L4.929 3.515L7.05 5.636L5.636 7.05L3.515 4.93V4.929ZM16.95 18.364L18.364 16.95L20.485 19.071L19.071 20.485L16.95 18.364ZM19.071 3.514L20.485 4.929L18.364 7.05L16.95 5.636L19.071 3.515V3.514ZM5.636 16.95L7.05 18.364L4.929 20.485L3.515 19.071L5.636 16.95ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+              fill="white"
+            />
+          </svg> -->
         </button>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
@@ -39,21 +54,29 @@
     </header>
     <main>
       <section class="start">
-        <div class="container">
-          <h1 class="start__title title">Бизнес-Консалтинг</h1>
+        <h1 class="start__title title">
+          Бизнес- <span class="start__title-modification">Консалтинг</span>
+        </h1>
+        <div class="start__wrapper-img">
           <img
-            src="img/main.jpg"
+            src="img/main.png"
             width="608"
             height="569"
             alt="main image"
             class="start__img"
           />
-          <p class="start__text text"></p>
         </div>
+        <p class="start__text text"></p>
       </section>
       <section class="about">
         <p class="about__info info">Обо мне</p>
-        <img src="img/about.jpg" alt="about image" class="about__img" />
+        <img
+          src="img/about.png"
+          alt="about image"
+          width="279"
+          height="327"
+          class="about__img"
+        />
         <p class="about__text text">
           По их почти единодушному мнению, самоактуализация откровенна. Толпа
           понимает объект. Действие точно аннигилирует генезис. Самонаблюдение,
@@ -65,6 +88,8 @@
         <img
           src="img/about-life.jpg"
           alt="image my life"
+          width="615"
+          height="396"
           class="about__img-life"
         />
         <button class="about__view">Смотреть</button>
@@ -102,9 +127,9 @@
         </p>
         <a href="#" class="gallery__link">webnauts.pro</a>
         <img
-          src="img/gallery-first.jpg"
-          width="615"
-          height="671"
+          src="img/gallery-first.png"
+          width="597"
+          height="665"
           alt="gallery image"
           class="gallery__img"
         />

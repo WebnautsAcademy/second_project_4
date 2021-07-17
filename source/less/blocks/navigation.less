@@ -1,1 +1,18 @@
-@import "../variables.less";
+.navigation {
+  &__item {
+    padding: 6px 18px 9px;
+    &--active {
+      .ellipse;
+      border: 1px solid #colors[border_color];
+    }
+  }
+}
+.navigation__link {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #colors[white_text];
+}
