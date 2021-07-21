@@ -56,6 +56,14 @@ body {
 .header__btn {
   margin-left: auto;
 }
+.header__switch-icon {
+  fill: #fff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header__switch-icon:hover {
+  fill: #f2c94c;
+}
 .header__wrapper {
   width: 100%;
   max-width: 1230px;
@@ -67,7 +75,9 @@ body {
 }
 .navigation__item {
   padding: 6px 18px 9px;
+  cursor: pointer;
 }
+.navigation__item:hover,
 .navigation__item--active {
   width: 135px;
   border-radius: 50%;
@@ -96,6 +106,10 @@ body {
   color: #fff;
   text-transform: uppercase;
 }
+.btn:hover {
+  background-color: #83c1fa;
+  transition: 0.3s ease-in-out;
+}
 .start {
   width: 100%;
   max-width: 1230px;
@@ -109,11 +123,11 @@ body {
   justify-content: space-between;
   position: relative;
 }
-.start__title-modification {
-  display: block;
+.start__title-mod {
   color: #fff;
   -webkit-text-stroke: #f4f4f4;
   text-shadow: 5px 5px #83c1fa;
+  display: block;
   padding-bottom: 68px;
 }
 .start__text {
@@ -138,7 +152,7 @@ body {
   z-index: -1;
 }
 .start__img {
-  box-shadow: 5px 5px #83c1fa;
+  box-shadow: 6px 6px #83c1fa;
 }
 .title {
   font-family: "BebasNeueBold";
@@ -151,8 +165,6 @@ body {
 }
 .text {
   font-family: "SFProDisplayMedium";
-  font-style: normal;
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
@@ -166,7 +178,7 @@ body {
   padding-bottom: 220px;
 }
 .about__text {
-  font-family: "SFProDisplay-Regular";
+  font-family: "SFProDisplayRegular";
   font-size: 16px;
   line-height: 24px;
   max-width: 590px;
@@ -183,9 +195,6 @@ body {
 }
 .about__wrapper-view {
   position: relative;
-}
-.about__img {
-  box-shadow: 5px 5px #83c1fa;
 }
 .about__view {
   font-family: "BebasNeueRegular";
@@ -215,4 +224,134 @@ body {
   position: absolute;
   top: -50px;
   left: 0;
+}
+.main {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 234px;
+}
+.main__list {
+  list-style-type: decimal-leading-zero;
+}
+.main__item {
+  margin-top: 23px;
+  width: 615px;
+}
+.main__item::marker {
+  font-family: "SFProDisplayMedium";
+  font-size: 20px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+.main__item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "SFProDisplayMedium";
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  color: #fff;
+  padding-left: 24px;
+  padding-bottom: 11px;
+}
+.main__item-title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+}
+.main__item-title:hover {
+  transition: 0.3s ease-in-out;
+  color: #83c1fa;
+  cursor: pointer;
+}
+.main__item-icon {
+  margin-right: 5%;
+}
+.main__item-text {
+  font-family: "SFProDisplayRegular";
+  max-width: 614px;
+  margin-left: -5%;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  display: none;
+}
+.main__item-title--active {
+  color: #83c1fa;
+}
+.gallery {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 220px;
+}
+.gallery__title {
+  color: #fff;
+  -webkit-text-stroke: #f4f4f4;
+  text-shadow: 5px 5px #83c1fa;
+}
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery__info {
+  margin-bottom: 64px;
+}
+.gallery__text {
+  max-width: 245px;
+}
+.gallery__text-indent {
+  padding-top: 35px;
+  margin-bottom: 50px;
+}
+.gallery__link {
+  font-family: "SFProDisplayRegular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+.gallery__link-icon {
+  margin-right: 12px;
+}
+.gallery__text .text {
+  font-family: "SFProDisplayRegular";
+}
+.project {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 220px;
+}
+.project__wrapper {
+  max-width: 640px;
+}
+.project__logo {
+  margin-bottom: 40px;
+}
+.project__text .text {
+  font-family: "SFProDisplayRegular";
+}
+.project__text-indent {
+  padding-top: 30px;
+}
+.review {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
 }
