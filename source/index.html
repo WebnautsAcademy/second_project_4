@@ -15,13 +15,19 @@
     <header class="header">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
-          <img
-            src="img/logo.png"
-            width="46"
-            height="19"
-            alt="logo image"
-            class="logo__img"
-          />
+          <picture>
+            <source
+              media="(min-resolution: 1.5dppx)"
+              srcset="./img/logo@2x.png 2x"
+            />
+            <img
+              src="img/logo.png"
+              width="46"
+              height="19"
+              alt="logo image"
+              class="logo__img"
+            />
+          </picture>
         </a>
         <button class="header__switch">
           <svg class="header__switch-icon" width="24" height="24">
@@ -58,9 +64,12 @@
           </div>
           <div class="start__wrapper-img">
             <picture>
+              <source
+                media="(min-resolution: 1.5dppx)"
+                srcset="./img/main@2x.png 2x"
+              />
               <img
                 src="./img/main.png"
-                srcset="./img/main@2x.png 2x"
                 width="608"
                 height="569"
                 alt="main image"
@@ -83,38 +92,48 @@
           </p>
         </div>
         <div class="about__wrapper-bottom">
-          <img
-            src="img/about.png"
-            srcset="./img/about@2x.png"
-            alt="about image"
-            width="286.47"
-            height="331.55"
-            class="about__img"
-          />
-          <div class="about__wrapper-view">
-            <img
-              src="img/about-life.jpg"
-              srcset="./img/about-life@2x.jpg"
-              alt="image my life"
-              width="615"
-              height="396"
-              class="about__img-life"
+          <picture>
+            <source
+              media="(min-resolution: 1.5dppx)"
+              srcset="./img/about@2x.png 2x"
             />
-            <button class="about__view">Смотреть</button>
+            <img
+              src="img/about.png"
+              alt="about image"
+              width="286.47"
+              height="331.55"
+              class="about__img"
+            />
+          </picture>
+          <div class="about__wrapper-view">
+            <picture>
+              <source
+                media="(min-resolution: 1.5dppx)"
+                srcset="./img/about-life@2x.jpg 2x"
+              />
+              <img
+                src="img/about-life.jpg"
+                alt="image my life"
+                width="615"
+                height="396"
+                class="about__img-life"
+              />
+            </picture>
+            <button class="about__view btn__view">Смотреть</button>
           </div>
         </div>
       </section>
-      <section class="main">
-        <p class="main__info info">Основные специализации</p>
-        <ul class="main__list">
-          <li class="main__item">
-            <div class="main__item-title">
+      <section class="content">
+        <p class="content__info info">Основные специализации</p>
+        <ul class="content__list">
+          <li class="content__item">
+            <div class="content__item-title">
               Увеличение продаж
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -123,14 +142,14 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-          <li class="main__item">
-            <div class="main__item-title">
+          <li class="content__item">
+            <div class="content__item-title">
               Повышение узнаваемости
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -139,14 +158,14 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-          <li class="main__item">
-            <div class="main__item-title">
+          <li class="content__item">
+            <div class="content__item-title">
               Расширение компании
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -155,14 +174,14 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-          <li class="main__item">
-            <div class="main__item-title">
+          <li class="content__item">
+            <div class="content__item-title">
               Что-то еще
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -171,14 +190,14 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-          <li class="main__item">
-            <div class="main__item-title">
+          <li class="content__item">
+            <div class="content__item-title">
               И еще что-то
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -187,14 +206,14 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-          <li class="main__item">
-            <div class="main__item-title">
+          <li class="content__item">
+            <div class="content__item-title">
               И еще одно что-нибудь
-              <svg class="main__item-icon" width="30" height="30">
+              <svg class="content__item-icon" width="30" height="30">
                 <use xlink:href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </div>
-            <p class="main__item-text text">
+            <p class="content__item-text text">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
@@ -210,13 +229,13 @@
         <div class="gallery__wrapper">
           <div class="gallery__about">
             <h4 class="gallery__info info">О проекте</h4>
-            <div class="gallery__text">
-              <p class="text">
+            <div class="gallery__text text">
+              <p class="gallery__text-top">
                 По их почти единодушному мнению, самоактуализация откровенна.
                 Толпа понимает объект. Действие точно аннигилирует генезис.
                 Самонаблюдение, конечно, притягивает филосовский гомеостаз.
               </p>
-              <p class="gallery__text-indent text">
+              <p class="gallery__text-bottom">
                 По их почти единодушному мнению, самоактуализация откровенна.
                 Толпа понимает объект. Действие точно аннигилирует генезис.
                 Самонаблюдение, конечно, притягивает филосовский гомеостаз.
@@ -230,13 +249,18 @@
             </div>
           </div>
           <div class="gallery__wrapper-img">
-            <img
-              src="./img/gallery-first.png"
-              srcset="./img/gallery-first@2x.png"
-              alt="gallery"
-              width="615"
-              height="671"
-            />
+            <picture>
+              <source
+                media="(min-resolution: 1.5dppx)"
+                srcset="./img/gallery-first@2x.png 2x"
+              />
+              <img
+                src="./img/gallery-first.png"
+                alt="gallery"
+                width="615"
+                height="671"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -244,22 +268,27 @@
         <p class="project__info info">Другие проекты</p>
         <div class="project__wrapper">
           <div class="project__logo">
-            <img
-              src="img/project-logo.png"
-              srcset="./img/project-logo@2x.png"
-              width="282"
-              height="113"
-              alt="project logo"
-              class="project__logo"
-            />
+            <picture>
+              <source
+                media="(min-resolution: 1.5dppx)"
+                srcset="./img/project-logo@2x.png 2x"
+              />
+              <img
+                src="img/project-logo.png"
+                width="282"
+                height="113"
+                alt="project logo"
+                class="project__logo"
+              />
+            </picture>
           </div>
-          <div class="project__text">
-            <p class="text">
+          <div class="project__text text">
+            <p class="project__text-top">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис.
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
-            <p class="project__text-indent text">
+            <p class="project__text-bottom">
               По их почти единодушному мнению, самоактуализация откровенна.
               Толпа понимает объект. Действие точно аннигилирует генезис. По их
               почти единодушному мнению, самоактуализация откровенна. Толпа
@@ -271,69 +300,125 @@
       </section>
       <section class="review">
         <p class="review__info info">Отзывы клиентов</p>
-        <div class="review__item-large">
-          <img
-            src="img/review-large.jpg"
-            srcset="./img/review-large@2x.jpg"
-            width="615"
-            height="346"
-            alt="large image"
-            class="review__img"
-          />
-          <div class="review__link">Смотреть отзыв</div>
-          <p class="review__info">Уилл Смит</p>
-          <p class="review__info-text">Актер, певец, классный мужик</p>
-        </div>
-        <div class="review__item-middle">
-          <img
-            src="img/review-middle.jpg"
-            srcset="./img/review-middle@2x.jpg"
-            width="292"
-            height="227"
-            alt="middle image"
-            class="review__img"
-          />
-          <p class="review__info">Марк Аврелий</p>
-          <p class="review__info-text">Римский император, философ</p>
-        </div>
-        <div class="review__item-smaller">
-          <img
-            src="img/review-smaller.jpg"
-            srcset="./img/review-smaller@2x.jpg"
-            width="232"
-            height="181"
-            alt="smaller image"
-            class="review__img"
-          />
-          <p class="review__info">Дядя Ваня</p>
-          <p class="review__info-text">Обувщик</p>
+        <div class="review__wrapper">
+          <div class="review__item review__item-large">
+            <div class="review__wrapper-img">
+              <picture>
+                <source
+                  media="(min-resolution: 1.5dppx)"
+                  srcset="./img/review-large@2x.jpg 2x"
+                />
+                <img
+                  src="img/review-large.jpg"
+                  width="615"
+                  height="346"
+                  alt="large image"
+                  class="review__img"
+                />
+              </picture>
+              <button class="review__view btn__view">Смотреть отзыв</button>
+              <button class="review__play">
+                <svg class="review__play-icon" width="36" height="36">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="review__info-about">Уилл Смит</p>
+            <p class="review__info-text">Актер, певец, классный мужик</p>
+          </div>
+          <div class="review__item review__item-middle">
+            <div class="review__wrapper-img">
+              <picture>
+                <source
+                  media="(min-resolution: 1.5dppx)"
+                  srcset="./img/review-middle@2x.jpg 2x"
+                />
+                <img
+                  src="img/review-middle.jpg"
+                  width="292"
+                  height="227"
+                  alt="middle image"
+                  class="review__img"
+                />
+              </picture>
+              <button class="review__play">
+                <svg class="review__play-icon" width="36" height="36">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="review__info-about">Марк Аврелий</p>
+            <p class="review__info-text">Римский император, философ</p>
+          </div>
+          <div class="review__item review__item-smaller">
+            <div class="review__wrapper-img">
+              <picture>
+                <source
+                  media="(min-resolution: 1.5dppx)"
+                  srcset="./img/review-smaller@2x.jpg 2x"
+                />
+                <img
+                  src="img/review-smaller.jpg"
+                  width="232"
+                  height="181"
+                  alt="smaller image"
+                  class="review__img"
+                />
+              </picture>
+              <button class="review__play">
+                <svg class="review__play-icon" width="36" height="36">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="review__info-about">Дядя Ваня</p>
+            <p class="review__info-text">Обувщик</p>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper-top">
-          <p class="footer__info info">Напишите мне</p>
-          <p class="footer__text text">
-            Проконсультирую по любым вопросам, связанным с масштабированием
-            бизнеса
-          </p>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="#">E-mail</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Facebook</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Telegram</a>
-            </li>
-          </ul>
-        </div>
+      <p class="footer__info info">Напишите мне</p>
+      <div class="footer__wrapper">
+        <p class="footer__text text">
+          Проконсультирую по любым вопросам, связанным с масштабированием
+          бизнеса
+        </p>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <svg class="footer__item-icon" width="86" height="86">
+              <use xlink:href="./img/sprite.svg#email"></use>
+            </svg>
+            <a class="footer__link" href="#">E-mail</a>
+            <svg class="footer__item-icon" width="43" height="43">
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__item-icon" width="86" height="86">
+              <use xlink:href="./img/sprite.svg#facebook"></use>
+            </svg>
+            <a class="footer__link" href="#">Facebook</a>
+            <svg class="footer__item-icon" width="43" height="43">
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__item-icon" width="86" height="86">
+              <use xlink:href="./img/sprite.svg#telegram"></use>
+            </svg>
+            <a class="footer__link" href="#">Telegram</a>
+            <svg class="footer__item-icon" width="43" height="43">
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </li>
+        </ul>
       </div>
       <div class="footer__wrapper-bottom">
         <a class="footer__link" href="#">2020. Все права защищены</a>
-        <a class="footer__link" href="#">Политика конфиденциальности</a>
+        <a class="footer__link footer__link-decor" href="#"
+          >Политика конфиденциальности</a
+        >
       </div>
     </footer>
 

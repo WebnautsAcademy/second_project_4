@@ -1,4 +1,43 @@
 .review {
   .container;
-  position: relative;
+  padding-bottom: 220px;
+  &__info {
+    margin-bottom: 83px;
+    &-about {
+      font-family: @proDisplayM;
+      font-size: 20px;
+      line-height: 24px;
+      color: #colors[white_text];
+
+      padding-top: 16px;
+    }
+    &-text {
+      font-family: @proDisplayM;
+      font-size: 14px;
+      line-height: 17px;
+      color: #colors[gray_text];
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: baseline;
+    &-img {
+      position: relative;
+    }
+  }
+  &__item {
+    padding-right: 30px;
+  }
+  &__view {
+    .circle;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+  &__play {
+    position: absolute;
+    top: 46%;
+    left: 49%;
+    cursor: pointer;
+  }
 }

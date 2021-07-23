@@ -69,6 +69,7 @@ body {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: flex-start;
   padding-top: 27px;
@@ -109,6 +110,12 @@ body {
 .btn:hover {
   background-color: #83c1fa;
   transition: 0.3s ease-in-out;
+}
+.btn__view {
+  font-family: "BebasNeueRegular";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
 }
 .start {
   width: 100%;
@@ -197,17 +204,14 @@ body {
   position: relative;
 }
 .about__view {
-  font-family: "BebasNeueRegular";
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  position: absolute;
-  right: 56px;
-  top: 65px;
   width: 130px;
   height: 130px;
   border-radius: 50%;
   background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 56px;
+  top: 65px;
 }
 .info {
   font-family: "BebasNeueRegular";
@@ -225,30 +229,30 @@ body {
   top: -50px;
   left: 0;
 }
-.main {
+.content {
   width: 100%;
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: space-between;
-  position: relative;
   padding-bottom: 234px;
 }
-.main__list {
+.content__list {
   list-style-type: decimal-leading-zero;
 }
-.main__item {
+.content__item {
   margin-top: 23px;
   width: 615px;
 }
-.main__item::marker {
+.content__item::marker {
   font-family: "SFProDisplayMedium";
   font-size: 20px;
   line-height: 24px;
   color: #4f4f4f;
 }
-.main__item-title {
+.content__item-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -260,7 +264,7 @@ body {
   padding-left: 24px;
   padding-bottom: 11px;
 }
-.main__item-title::after {
+.content__item-title::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -269,15 +273,15 @@ body {
   left: -5%;
   bottom: 0;
 }
-.main__item-title:hover {
+.content__item-title:hover {
   transition: 0.3s ease-in-out;
   color: #83c1fa;
   cursor: pointer;
 }
-.main__item-icon {
+.content__item-icon {
   margin-right: 5%;
 }
-.main__item-text {
+.content__item-text {
   font-family: "SFProDisplayRegular";
   max-width: 614px;
   margin-left: -5%;
@@ -285,7 +289,7 @@ body {
   padding-bottom: 40px;
   display: none;
 }
-.main__item-title--active {
+.content__item-title--active {
   color: #83c1fa;
 }
 .gallery {
@@ -309,9 +313,10 @@ body {
   margin-bottom: 64px;
 }
 .gallery__text {
+  font-family: "SFProDisplayRegular";
   max-width: 245px;
 }
-.gallery__text-indent {
+.gallery__text-bottom {
   padding-top: 35px;
   margin-bottom: 50px;
 }
@@ -320,18 +325,29 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  padding-left: 35px;
+  position: relative;
 }
 .gallery__link-icon {
-  margin-right: 12px;
+  position: absolute;
+  left: 0;
 }
-.gallery__text .text {
-  font-family: "SFProDisplayRegular";
+.gallery__link::after {
+  content: "";
+  display: block;
+  width: 73%;
+  height: 1px;
+  background-color: #c4c4c4;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
 }
 .project {
   width: 100%;
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-bottom: 220px;
@@ -342,10 +358,10 @@ body {
 .project__logo {
   margin-bottom: 40px;
 }
-.project__text .text {
+.project__text {
   font-family: "SFProDisplayRegular";
 }
-.project__text-indent {
+.project__text-bottom {
   padding-top: 30px;
 }
 .review {
@@ -354,4 +370,103 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 220px;
+}
+.review__info {
+  margin-bottom: 83px;
+}
+.review__info-about {
+  font-family: "SFProDisplayMedium";
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  padding-top: 16px;
+}
+.review__info-text {
+  font-family: "SFProDisplayMedium";
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+.review__wrapper {
+  display: flex;
+  align-items: baseline;
+}
+.review__wrapper-img {
+  position: relative;
+}
+.review__item {
+  padding-right: 30px;
+}
+.review__view {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+.review__play {
+  position: absolute;
+  top: 46%;
+  left: 49%;
+  cursor: pointer;
+}
+.footer {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+.footer__wrapper {
+  display: flex;
+  padding-bottom: 206px;
+}
+.footer__wrapper-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: "SFProDisplayMedium";
+  font-size: 12px;
+  line-height: 14px;
+  color: #a0a0a0;
+  opacity: 0.54;
+  margin-bottom: 59px;
+}
+.footer__info {
+  margin-bottom: 25px;
+}
+.footer__text {
+  max-width: 371px;
+  color: #fff;
+  opacity: 0.4;
+  margin-right: 211px;
+}
+.footer__item {
+  padding-bottom: 60px;
+  position: relative;
+}
+.footer__item-icon {
+  position: absolute;
+  z-index: -1;
+}
+.footer__list {
+  font-family: "BebasNeueBold";
+  font-size: 56px;
+  line-height: 56px;
+}
+.footer__link {
+  color: #fff;
+  position: relative;
+}
+.footer__link-decor::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  margin-top: 7px;
 }
