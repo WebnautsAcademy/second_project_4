@@ -1,0 +1,47 @@
+.gallery {
+  .container;
+  padding-bottom: 220px;
+  &__title {
+    .title-modification;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    margin-bottom: 64px;
+  }
+  &__text {
+    font-family: @proDisplay;
+    font-weight: 400;
+    max-width: 245px;
+    &-bottom {
+      padding-top: 35px;
+      margin-bottom: 50px;
+    }
+  }
+  &__link {
+    font-family: @proDisplay;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #colors[link_color];
+    padding-left: 35px;
+    position: relative;
+    &-icon {
+      position: absolute;
+      left: 0;
+      fill: #colors[icon];
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 73%;
+      height: 1px;
+      background-color: #colors[decor_line];
+      opacity: 0.2;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

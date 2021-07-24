@@ -5,7 +5,8 @@
   width: 265px;
   height: 65px;
 
-  font-family: @bebasNeueBold;
+  font-family: @bebasNeue;
+  font-weight: 700;
   font-size: 24px;
   line-height: 24px;
 
@@ -15,4 +16,21 @@
   padding: 26px 54px 15px;
   color: #colors[white_text];
   text-transform: uppercase;
+  &:hover {
+    background-color: #colors[bg_btn];
+    transition: 0.3s ease-in-out;
+  }
+}
+.btn__circle {
+  font-family: @bebasNeue;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
 }

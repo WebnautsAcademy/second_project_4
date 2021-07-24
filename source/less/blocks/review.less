@@ -1,0 +1,47 @@
+.review {
+  .container;
+  padding-bottom: 220px;
+  &__info {
+    margin-bottom: 83px;
+    &-about {
+      font-family: @proDisplay;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #colors[white_text];
+
+      padding-top: 16px;
+    }
+    &-text {
+      font-family: @proDisplay;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #colors[gray_text];
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: baseline;
+    &-img {
+      position: relative;
+    }
+  }
+  &__item {
+    padding-right: 30px;
+  }
+  &__view {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  &__play {
+    position: absolute;
+    top: 46%;
+    left: 49%;
+    fill: #colors[icon_play];
+    cursor: pointer;
+  }
+}
