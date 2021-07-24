@@ -4,7 +4,8 @@
   &__info {
     margin-bottom: 83px;
     &-about {
-      font-family: @proDisplayM;
+      font-family: @proDisplay;
+      font-weight: 500;
       font-size: 20px;
       line-height: 24px;
       color: #colors[white_text];
@@ -12,7 +13,8 @@
       padding-top: 16px;
     }
     &-text {
-      font-family: @proDisplayM;
+      font-family: @proDisplay;
+      font-weight: 500;
       font-size: 14px;
       line-height: 17px;
       color: #colors[gray_text];
@@ -29,15 +31,17 @@
     padding-right: 30px;
   }
   &__view {
-    .circle;
     position: absolute;
     top: 35%;
     left: 10%;
+    padding-left: 36px;
+    padding-right: 36px;
   }
   &__play {
     position: absolute;
     top: 46%;
     left: 49%;
+    fill: #colors[icon_play];
     cursor: pointer;
   }
 }

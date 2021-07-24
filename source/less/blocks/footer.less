@@ -8,7 +8,8 @@
       display: flex;
       justify-content: space-between;
 
-      font-family: @proDisplayM;
+      font-family: @proDisplay;
+      font-weight: 500;
       font-size: 12px;
       line-height: 14px;
       color: #colors[footer__text];
@@ -27,17 +28,15 @@
     margin-right: 211px;
   }
   &__item {
+    max-width: 178px;
     padding-bottom: 60px;
-    position: relative;
     &-icon {
-      position: absolute;
-      //   top: -35%;
-      //   left: -32%;
-      z-index: -1;
+      fill: #colors[icon_footer];
     }
   }
   &__list {
-    font-family: @bebasNeueBold;
+    font-family: @bebasNeue;
+    font-weight: 700;
     font-size: 56px;
     line-height: 56px;
   }
@@ -56,3 +55,6 @@
     }
   }
 }
+// .footer__link::before {
+//   background-image: url("../img/facebook.svg");
+// }

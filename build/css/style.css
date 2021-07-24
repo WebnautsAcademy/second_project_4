@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "BebasNeueBold";
+  font-family: "BebasNeue";
   src: url("../fonts/BebasNeueBold.otf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "BebasNeueRegular";
+  font-family: "BebasNeue";
   src: url("../fonts/BebasNeueRegular.otf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
   src: url("../fonts/SFProDisplay-Medium.woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
   src: url("../fonts/SFProDisplay-Regular.woff");
   font-weight: 400;
   font-style: normal;
@@ -85,7 +85,7 @@ body {
   border: 1px solid #83c1fa;
 }
 .navigation__link {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -98,7 +98,8 @@ body {
   justify-content: center;
   width: 265px;
   height: 65px;
-  font-family: "BebasNeueBold";
+  font-family: "BebasNeue";
+  font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   border: 1px solid #83c1fa;
@@ -111,11 +112,17 @@ body {
   background-color: #83c1fa;
   transition: 0.3s ease-in-out;
 }
-.btn__view {
-  font-family: "BebasNeueRegular";
+.btn__circle {
+  font-family: "BebasNeue";
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
 }
 .start {
   width: 100%;
@@ -162,7 +169,7 @@ body {
   box-shadow: 6px 6px #83c1fa;
 }
 .title {
-  font-family: "BebasNeueBold";
+  font-family: "BebasNeue";
   font-weight: 700;
   font-size: 190px;
   line-height: 190px;
@@ -171,7 +178,8 @@ body {
   -webkit-text-stroke: 2px #8e8e8e;
 }
 .text {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
@@ -185,7 +193,8 @@ body {
   padding-bottom: 220px;
 }
 .about__text {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   max-width: 590px;
@@ -204,17 +213,13 @@ body {
   position: relative;
 }
 .about__view {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
   position: absolute;
   right: 56px;
   top: 65px;
 }
 .info {
-  font-family: "BebasNeueRegular";
+  font-family: "BebasNeue";
+  font-weight: 400;
   font-size: 36px;
   line-height: 43px;
   color: #fff;
@@ -247,7 +252,8 @@ body {
   width: 615px;
 }
 .content__item::marker {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: #4f4f4f;
@@ -256,7 +262,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   position: relative;
@@ -275,14 +282,16 @@ body {
 }
 .content__item-title:hover {
   transition: 0.3s ease-in-out;
-  color: #83c1fa;
   cursor: pointer;
 }
 .content__item-icon {
   margin-right: 5%;
+  fill: #fff;
+  transition: 0.3s;
 }
 .content__item-text {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
+  font-weight: 400;
   max-width: 614px;
   margin-left: -5%;
   padding-top: 24px;
@@ -291,6 +300,11 @@ body {
 }
 .content__item-title--active {
   color: #83c1fa;
+}
+.content__item-title--active svg {
+  transform: rotate(180deg);
+  transition: 0.3s;
+  fill: #83c1fa;
 }
 .gallery {
   width: 100%;
@@ -313,7 +327,8 @@ body {
   margin-bottom: 64px;
 }
 .gallery__text {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
+  font-weight: 400;
   max-width: 245px;
 }
 .gallery__text-bottom {
@@ -321,7 +336,8 @@ body {
   margin-bottom: 50px;
 }
 .gallery__link {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
@@ -331,6 +347,7 @@ body {
 .gallery__link-icon {
   position: absolute;
   left: 0;
+  fill: #fff;
 }
 .gallery__link::after {
   content: "";
@@ -359,7 +376,8 @@ body {
   margin-bottom: 40px;
 }
 .project__text {
-  font-family: "SFProDisplayRegular";
+  font-family: "SFProDisplay";
+  font-weight: 400;
 }
 .project__text-bottom {
   padding-top: 30px;
@@ -376,14 +394,16 @@ body {
   margin-bottom: 83px;
 }
 .review__info-about {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
   padding-top: 16px;
 }
 .review__info-text {
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #828282;
@@ -399,19 +419,17 @@ body {
   padding-right: 30px;
 }
 .review__view {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
   position: absolute;
   top: 35%;
   left: 10%;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 .review__play {
   position: absolute;
   top: 46%;
   left: 49%;
+  fill: #83c1fa;
   cursor: pointer;
 }
 .footer {
@@ -428,7 +446,8 @@ body {
 .footer__wrapper-bottom {
   display: flex;
   justify-content: space-between;
-  font-family: "SFProDisplayMedium";
+  font-family: "SFProDisplay";
+  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #a0a0a0;
@@ -445,15 +464,15 @@ body {
   margin-right: 211px;
 }
 .footer__item {
+  max-width: 178px;
   padding-bottom: 60px;
-  position: relative;
 }
 .footer__item-icon {
-  position: absolute;
-  z-index: -1;
+  fill: #4f4f4f;
 }
 .footer__list {
-  font-family: "BebasNeueBold";
+  font-family: "BebasNeue";
+  font-weight: 700;
   font-size: 56px;
   line-height: 56px;
 }

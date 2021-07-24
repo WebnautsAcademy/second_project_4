@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>academy project</title>
   </head>
@@ -15,15 +11,10 @@
     <header class="header">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
-          <picture>
-            <source
-              media="(min-resolution: 1.5dppx)"
-              srcset="./img/logo@2x.png 2x"
-            />
+          <picture class="picture">
             <img
               src="img/logo.png"
-              width="46"
-              height="19"
+              srcset="./img/logo@2x.png 2x"
               alt="logo image"
               class="logo__img"
             />
@@ -63,15 +54,10 @@
             </p>
           </div>
           <div class="start__wrapper-img">
-            <picture>
-              <source
-                media="(min-resolution: 1.5dppx)"
-                srcset="./img/main@2x.png 2x"
-              />
+            <picture class="picture">
               <img
                 src="./img/main.png"
-                width="608"
-                height="569"
+                srcset="./img/main@2x.png 2x"
                 alt="main image"
                 class="start__img"
               />
@@ -92,34 +78,24 @@
           </p>
         </div>
         <div class="about__wrapper-bottom">
-          <picture>
-            <source
-              media="(min-resolution: 1.5dppx)"
-              srcset="./img/about@2x.png 2x"
-            />
+          <picture class="picture">
             <img
               src="img/about.png"
+              srcset="./img/about@2x.png 2x"
               alt="about image"
-              width="286.47"
-              height="331.55"
               class="about__img"
             />
           </picture>
           <div class="about__wrapper-view">
-            <picture>
-              <source
-                media="(min-resolution: 1.5dppx)"
-                srcset="./img/about-life@2x.jpg 2x"
-              />
+            <picture class="picture">
               <img
                 src="img/about-life.jpg"
+                srcset="./img/about-life@2x.jpg 2x"
                 alt="image my life"
-                width="615"
-                height="396"
                 class="about__img-life"
               />
             </picture>
-            <button class="about__view btn__view">Смотреть</button>
+            <button class="about__view btn__circle">Смотреть</button>
           </div>
         </div>
       </section>
@@ -226,57 +202,106 @@
       </section>
       <section class="gallery">
         <h1 class="gallery__title title">Webnauts</h1>
-        <div class="gallery__wrapper">
-          <div class="gallery__about">
-            <h4 class="gallery__info info">О проекте</h4>
-            <div class="gallery__text text">
-              <p class="gallery__text-top">
-                По их почти единодушному мнению, самоактуализация откровенна.
-                Толпа понимает объект. Действие точно аннигилирует генезис.
-                Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-              </p>
-              <p class="gallery__text-bottom">
-                По их почти единодушному мнению, самоактуализация откровенна.
-                Толпа понимает объект. Действие точно аннигилирует генезис.
-                Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-              </p>
-              <a href="#" class="gallery__link">
-                <svg class="gallery__link-icon" width="24" height="24">
-                  <use xlink:href="./img/sprite.svg#link"></use>
-                </svg>
-                webnauts.pro</a
-              >
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="gallery__wrapper">
+                <div class="gallery__about">
+                  <h4 class="gallery__info info">О проекте</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <p class="gallery__text-bottom">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <a href="#" class="gallery__link">
+                      <svg class="gallery__link-icon" width="24" height="24">
+                        <use xlink:href="./img/sprite.svg#link"></use>
+                      </svg>
+                      webnauts.pro</a
+                    >
+                  </div>
+                </div>
+                <div class="gallery__wrapper-img">
+                  <picture class="picture">
+                    <img
+                      src="./img/gallery-first.png"
+                      srcset="./img/gallery-first@2x.png 2x"
+                      alt="gallery"
+                      class="gallery__img"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
+            <div class="swiper-slide">
+              <div class="gallery__wrapper">
+                <div class="gallery__about">
+                  <h4 class="gallery__info info">О проекте</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <p class="gallery__text-bottom">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <a href="#" class="gallery__link">
+                      <svg class="gallery__link-icon" width="24" height="24">
+                        <use xlink:href="./img/sprite.svg#link"></use>
+                      </svg>
+                      webnauts.pro</a
+                    >
+                  </div>
+                </div>
+                <div class="gallery__wrapper-img">
+                  <picture class="picture">
+                    <img
+                      src="./img/gallery-first.png"
+                      srcset="./img/gallery-first@2x.png 2x"
+                      alt="gallery"
+                      class="gallery__img"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
           </div>
-          <div class="gallery__wrapper-img">
-            <picture>
-              <source
-                media="(min-resolution: 1.5dppx)"
-                srcset="./img/gallery-first@2x.png 2x"
-              />
-              <img
-                src="./img/gallery-first.png"
-                alt="gallery"
-                width="615"
-                height="671"
-              />
-            </picture>
-          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
       </section>
       <section class="project">
         <p class="project__info info">Другие проекты</p>
         <div class="project__wrapper">
           <div class="project__logo">
-            <picture>
-              <source
-                media="(min-resolution: 1.5dppx)"
-                srcset="./img/project-logo@2x.png 2x"
-              />
+            <picture class="picture">
               <img
                 src="img/project-logo.png"
-                width="282"
-                height="113"
+                srcset="./img/project-logo@2x.png 2x"
                 alt="project logo"
                 class="project__logo"
               />
@@ -303,20 +328,15 @@
         <div class="review__wrapper">
           <div class="review__item review__item-large">
             <div class="review__wrapper-img">
-              <picture>
-                <source
-                  media="(min-resolution: 1.5dppx)"
-                  srcset="./img/review-large@2x.jpg 2x"
-                />
+              <picture class="picture">
                 <img
                   src="img/review-large.jpg"
-                  width="615"
-                  height="346"
+                  srcset="./img/review-large@2x.jpg 2x"
                   alt="large image"
                   class="review__img"
                 />
               </picture>
-              <button class="review__view btn__view">Смотреть отзыв</button>
+              <button class="review__view btn__circle">Смотреть отзыв</button>
               <button class="review__play">
                 <svg class="review__play-icon" width="36" height="36">
                   <use xlink:href="./img/sprite.svg#play"></use>
@@ -328,15 +348,10 @@
           </div>
           <div class="review__item review__item-middle">
             <div class="review__wrapper-img">
-              <picture>
-                <source
-                  media="(min-resolution: 1.5dppx)"
-                  srcset="./img/review-middle@2x.jpg 2x"
-                />
+              <picture class="picture">
                 <img
                   src="img/review-middle.jpg"
-                  width="292"
-                  height="227"
+                  srcset="./img/review-middle@2x.jpg 2x"
                   alt="middle image"
                   class="review__img"
                 />
@@ -352,15 +367,10 @@
           </div>
           <div class="review__item review__item-smaller">
             <div class="review__wrapper-img">
-              <picture>
-                <source
-                  media="(min-resolution: 1.5dppx)"
-                  srcset="./img/review-smaller@2x.jpg 2x"
-                />
+              <picture class="picture">
                 <img
                   src="img/review-smaller.jpg"
-                  width="232"
-                  height="181"
+                  srcset="./img/review-smaller@2x.jpg 2x"
                   alt="smaller image"
                   class="review__img"
                 />

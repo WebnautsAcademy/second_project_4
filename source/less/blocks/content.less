@@ -12,7 +12,8 @@
   margin-top: 23px;
   width: 615px;
   &::marker {
-    font-family: @proDisplayM;
+    font-family: @proDisplay;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #colors[list_color];
@@ -22,7 +23,8 @@
     justify-content: space-between;
     align-items: center;
 
-    font-family: @proDisplayM;
+    font-family: @proDisplay;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
 
@@ -42,15 +44,17 @@
     }
     &:hover {
       transition: 0.3s ease-in-out;
-      color: #colors[hover__color];
       cursor: pointer;
     }
   }
   &-icon {
     margin-right: 5%;
+    fill: #colors[icon];
+    transition: 0.3s;
   }
   &-text {
-    font-family: @proDisplayR;
+    font-family: @proDisplay;
+    font-weight: 400;
 
     max-width: 614px;
     margin-left: -5%;
@@ -62,4 +66,10 @@
 }
 .content__item-title--active {
   color: #colors[active_color];
+
+  & svg {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    fill: #colors[icon_active];
+  }
 }
