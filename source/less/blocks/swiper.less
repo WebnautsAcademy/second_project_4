@@ -1,0 +1,32 @@
+.swiper-container {
+  position: relative;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 85px;
+  height: 85px;
+  color: #colors[white_text];
+  border: 1px solid #colors[gallery_border];
+  border-radius: 50%;
+
+  font-family: @bebasNeue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+
+  position: static;
+  margin-left: 31px;
+}
+.swiper__decor {
+  margin-top: 30px;
+ 
+  &-slide {
+    max-width: 292px;
+    padding-right: 30px;
+  }
+}

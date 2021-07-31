@@ -1,22 +1,44 @@
 .content {
   .container;
+  .section-decor;
   display: flex;
   justify-content: space-between;
 
   padding-bottom: 234px;
   &__list {
     list-style-type: decimal-leading-zero;
+    counter-reset: num;
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    & li {
+      counter-increment: num;
+      position: relative;
+      margin: 5px 0 5px 40px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 20px;
+      &::before {
+        content: counter(num);
+        position: absolute;
+        left: -5%;
+        top: 5px;
+        font-family: @proDisplay;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #colors[list_color];
+      }
+      &:nth-child(-n + 9):before {
+        content: "0" counter(num);
+      }
+    }
   }
 }
 .content__item {
   margin-top: 23px;
   width: 615px;
   &::marker {
-    font-family: @proDisplay;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #colors[list_color];
   }
   &-title {
     display: flex;
@@ -42,8 +64,18 @@
       left: -5%;
       bottom: 0;
     }
+    &--active {
+      color: #colors[active_color];
+      & svg {
+        transform: rotate(180deg);
+        transition: 0.3s;
+        fill: #colors[icon_active];
+      }
+    }
     &:hover {
       transition: 0.3s ease-in-out;
+
+      color: #colors[hover__color];
       cursor: pointer;
     }
   }
@@ -62,14 +94,5 @@
     padding-bottom: 40px;
 
     display: none;
-  }
-}
-.content__item-title--active {
-  color: #colors[active_color];
-
-  & svg {
-    transform: rotate(180deg);
-    transition: 0.3s;
-    fill: #colors[icon_active];
   }
 }

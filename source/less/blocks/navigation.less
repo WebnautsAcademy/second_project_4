@@ -1,12 +1,8 @@
 .navigation {
+  align-items: center;
   &__item {
     padding: 6px 18px 9px;
     cursor: pointer;
-    &:hover,
-    &--active {
-      .ellipse;
-      border: 1px solid #colors[border_color];
-    }
   }
 }
 .navigation__link {
@@ -16,4 +12,12 @@
   line-height: 19px;
   text-align: center;
   color: #colors[white_text];
+
+  padding: 6px 19px 9px;
+  &--active {
+    .ellipse;
+  }
+  &:hover {
+    .ellipse;
+  }
 }

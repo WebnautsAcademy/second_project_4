@@ -1,5 +1,6 @@
 .footer {
   .container;
+  .section-decor;
 
   &__wrapper {
     display: flex;
@@ -27,34 +28,62 @@
     opacity: 0.4;
     margin-right: 211px;
   }
-  &__item {
-    max-width: 178px;
-    padding-bottom: 60px;
-    &-icon {
-      fill: #colors[icon_footer];
-    }
-  }
   &__list {
     font-family: @bebasNeue;
     font-weight: 700;
     font-size: 56px;
     line-height: 56px;
   }
-  &__link {
-    color: #colors[white_text];
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // left: -20px;
+    margin-bottom: 60px;
     position: relative;
-
-    &-decor::after {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #colors[decor_line];
+    &-decor {
+      fill: #colors[list_color];
       position: absolute;
-      margin-top: 7px;
+      top: -25%;
+      left: -7%;
+      z-index: -1;
+      &-mod {
+        left: 0;
+      }
+    }
+    &-icon {
+      fill: #colors[list_color];
+    }
+    &:hover .footer__item-icon {
+      transform: translateX(14px);
+      transition: 0.3s ease-in-out;
+      fill: #colors[hover__color];
     }
   }
+  &__link {
+    color: #colors[white_text];
+    padding-left: 36px;
+    padding-right: 77px;
+    &:hover {
+      color: #colors[hover__color];
+      padding: 20px 35px 4px;
+      .ellipse;
+    }
+  }
+  &__email {
+    position: static;
+  }
 }
-// .footer__link::before {
-//   background-image: url("../img/facebook.svg");
-// }
+.footer__link-bottom {
+  position: relative;
+  color: #colors[white_text];
+}
+.footer__link-decor::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #colors[decor_line];
+  position: absolute;
+  margin-top: 7px;
+}

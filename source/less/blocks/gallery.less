@@ -1,20 +1,43 @@
 .gallery {
   .container;
+  .section-decor;
   padding-bottom: 220px;
   &__title {
     .title-modification;
+    margin-bottom: 66px;
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    &-content {
+      display: grid;
+      width: 616px;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 215px;
+    }
+    &-info {
+      position: relative;
+    }
+    &-team {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  &__about {
+    max-width: 245px;
   }
   &__info {
+    font-family: @bebasNeue;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+
     margin-bottom: 64px;
   }
   &__text {
     font-family: @proDisplay;
     font-weight: 400;
-    max-width: 245px;
+
     &-bottom {
       padding-top: 35px;
       margin-bottom: 50px;
@@ -44,4 +67,116 @@
       right: 0;
     }
   }
+  &__navigation {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    right: 0;
+  }
+  &__pagination {
+    width: 150px;
+    margin-right: 117px;
+    position: relative;
+    &-current {
+      font-family: @bebasNeue;
+      font-size: 144px;
+      font-weight: 700;
+      line-height: 144px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      color: #colors[ gray_text];
+
+      &::after {
+        content: "";
+        display: block;
+        width: 189px;
+        height: 1px;
+        background-color: #colors[ gray_border];
+        position: absolute;
+        top: 18%;
+        left: 7%;
+        transform: rotate(-45deg);
+      }
+      &--mod {
+        &::after {
+          top: 25%;
+          left: 5%;
+        }
+      }
+      &--modteam {
+        &::after {
+          top: 37%;
+          left: 0;
+        }
+      }
+    }
+    &-total {
+      font-family: @bebasNeue;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      color: #colors[gallery_text];
+      position: absolute;
+      top: 23%;
+      right: 5%;
+      &--mod {
+        top: 30%;
+        right: 5%;
+      }
+      &-modteam {
+        top: 50%;
+        right: 5%;
+      }
+    }
+  }
+  &__team {
+    display: flex;
+    margin-top: 100px;
+  }
+  &__box {
+    border: 1px solid #colors[gallery_box];
+    cursor: pointer;
+    &:hover {
+      transition: 0.3s ease-in-out;
+      border-color: #colors[hover__color];
+    }
+    &-title {
+      font-family: @bebasNeue;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 100px;
+      text-align: left;
+      color: #colors[white_text];
+
+      margin-top: 26px;
+      margin-left: 30px;
+      margin-bottom: 25px;
+    }
+    &-text {
+      font-family: @proDisplay;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      text-align: left;
+      color: #colors[white_text];
+
+      max-width: 220px;
+      margin-left: 30px;
+      margin-bottom: 25px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 58px;
+    right: 105px;
+    color: #colors[white_text];
+    background-color: #colors[bg_btn];
+  }
+}
+.gallery__img-team {
+  padding-left: 30px;
 }

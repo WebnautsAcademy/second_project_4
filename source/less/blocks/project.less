@@ -1,19 +1,46 @@
 .project {
   .container;
+  .section-decor;
   display: flex;
   justify-content: space-between;
+
   padding-bottom: 220px;
   &__wrapper {
     max-width: 640px;
   }
   &__logo {
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__text {
     font-family: @proDisplay;
     font-weight: 400;
+
+    margin-top: 40px;
     &-bottom {
       padding-top: 30px;
     }
   }
+  &__info {
+    width: 100%;
+    margin-right: 465px;
+  }
+  &__total {
+    font-family: @bebasNeue;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    text-align: left;
+    color: #colors[gallery_text];
+  }
+  &__navigation {
+    display: flex;
+    position: absolute;
+    left: -2.8%;
+    bottom: 0;
+  }
+}
+.project-swiper {
+  padding-bottom: 149px;
 }
