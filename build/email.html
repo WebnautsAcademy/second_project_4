@@ -25,6 +25,7 @@
             <use xlink:href="./img/sprite.svg#day"></use>
           </svg>
         </button>
+
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -47,27 +48,30 @@
       <section class="email">
         <h1 class="email__title">Привет,</h1>
         <form action="#" method="GET" class="form">
-          <label class="email__title-name">
+          <label class="email__title-name form__title">
             Меня зовут
             <input
+              class="form__input form__name"
               type="text"
               name="user"
               placeholder="Введите ваше имя"
               id="name"
             />
           </label>
-          <label class="email__title-email">
+          <label class="email__title-email form__title">
             И вот моя почта
             <input
+              class="form__input form__email"
               type="email"
               name="email"
               placeholder="Введите вашу почту"
               id="email"
             />
           </label>
-          <label class="email__title-text">
+          <label class="email__title-text form__title">
             Я хочу сказать
             <input
+              class="form__input form__text"
               type="text"
               name="text"
               placeholder="Введите ваше сообщение"

@@ -1,30 +1,72 @@
 .header {
+  @media screen and (max-width: @medium) {
+    &--close {
+      .header__navigation {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    .container;
+    display: flex;
+    align-items: flex-start;
+
+    padding-top: 27px;
+    @media screen and (max-width: @medium) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   padding-bottom: 160px;
+  @media screen and (max-width: @small) {
+    padding-bottom: 70px;
+  }
   &__email {
     padding-bottom: 130px;
   }
   &__logo {
     margin-right: 34px;
+    @media screen and (max-width: @medium) {
+      margin-right: 0;
+    }
   }
+
   &__switch {
     margin-right: 157px;
+    @media screen and (max-width: @medium) {
+      margin-right: 0;
+    }
+    &-icon {
+      fill: #colors[icon];
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        fill: #colors[icon_hover];
+      }
+    }
   }
+
   &__btn {
     margin-left: auto;
   }
-}
-.header__switch-icon {
-  fill: #colors[icon];
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    fill: #colors[icon_hover];
+  @media screen and (max-width: @medium) {
+    .header__btn {
+      display: none;
+    }
   }
-}
-.header__wrapper {
-  .container;
-  display: flex;
-  align-items: flex-start;
-
-  padding-top: 27px;
+  &__burger {
+    display: none;
+    &-icon {
+      fill: transparent;
+      stroke: #colors[icon];
+    }
+  }
+  @media screen and (max-width: @medium) {
+    &__burger {
+      display: block;
+    }
+  }
 }

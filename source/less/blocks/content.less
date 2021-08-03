@@ -5,12 +5,17 @@
   justify-content: space-between;
 
   padding-bottom: 234px;
+  @media screen and (max-width: @small) {
+    padding-bottom: 110px;
+  }
+  @media screen and (max-width: @medium) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
   &__list {
     list-style-type: decimal-leading-zero;
     counter-reset: num;
-    list-style: none;
     margin-bottom: 20px;
-    padding: 0;
     & li {
       counter-increment: num;
       position: relative;
@@ -22,7 +27,7 @@
         content: counter(num);
         position: absolute;
         left: -5%;
-        top: 5px;
+        top: 10px;
         font-family: @proDisplay;
         font-weight: 500;
         font-size: 20px;
@@ -34,11 +39,17 @@
       }
     }
   }
+  &__info {
+    @media screen and (max-width: @medium) {
+      margin-bottom: 67px;
+    }
+  }
 }
 .content__item {
   margin-top: 23px;
   width: 615px;
-  &::marker {
+  @media screen and (max-width: @medium) {
+    width: 100%;
   }
   &-title {
     display: flex;
@@ -53,6 +64,7 @@
     position: relative;
 
     color: #colors[white_text];
+    padding-top: 5px;
     padding-left: 24px;
     padding-bottom: 11px;
     &::after {

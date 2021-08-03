@@ -16,6 +16,18 @@ $(document).ready(function(){
     //     }
     //   })
     // })
+ 
+   
+    const header = document.querySelector('.header');   
+    const menuOpen = document.querySelector('.header__burger');
+    const menuClose = document.querySelector('.navigation__close');
+    
+    menuOpen.addEventListener("click", ()=>{
+      header.classList.remove('header--close')
+    });
+    menuClose.addEventListener("click", ()=>{
+      header.classList.add('header--close')
+    });
 });
 
 const swiper = new Swiper(".swiper-container", {

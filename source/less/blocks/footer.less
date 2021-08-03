@@ -69,21 +69,18 @@
       padding: 20px 35px 4px;
       .ellipse;
     }
+    &-bottom {
+      position: relative;
+      color: #colors[white_text];
+    }
+    &-decor::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #colors[decor_line];
+      position: absolute;
+      margin-top: 7px;
+    }
   }
-  &__email {
-    position: static;
-  }
-}
-.footer__link-bottom {
-  position: relative;
-  color: #colors[white_text];
-}
-.footer__link-decor::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #colors[decor_line];
-  position: absolute;
-  margin-top: 7px;
 }

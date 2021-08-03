@@ -47,25 +47,10 @@ body {
 .header {
   padding-bottom: 160px;
 }
-.header__email {
-  padding-bottom: 130px;
-}
-.header__logo {
-  margin-right: 34px;
-}
-.header__switch {
-  margin-right: 157px;
-}
-.header__btn {
-  margin-left: auto;
-}
-.header__switch-icon {
-  fill: #fff;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-.header__switch-icon:hover {
-  fill: #f2c94c;
+@media screen and (max-width: 768px) {
+  .header--close .header__navigation {
+    display: none;
+  }
 }
 .header__wrapper {
   width: 100%;
@@ -77,12 +62,77 @@ body {
   align-items: flex-start;
   padding-top: 27px;
 }
+@media screen and (max-width: 768px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    padding-bottom: 70px;
+  }
+}
+.header__email {
+  padding-bottom: 130px;
+}
+.header__logo {
+  margin-right: 34px;
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}
+.header__switch {
+  margin-right: 157px;
+}
+@media screen and (max-width: 768px) {
+  .header__switch {
+    margin-right: 0;
+  }
+}
+.header__switch-icon {
+  fill: #fff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header__switch-icon:hover {
+  fill: #f2c94c;
+}
+.header__btn {
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .header .header__btn {
+    display: none;
+  }
+}
+.header__burger {
+  display: none;
+}
+.header__burger-icon {
+  fill: transparent;
+  stroke: #fff;
+}
+@media screen and (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+}
 .navigation {
   align-items: center;
 }
 .navigation__item {
   padding: 6px 18px 9px;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .navigation__item {
+    margin-bottom: 56px;
+    text-align: center;
+  }
 }
 .navigation__link {
   font-family: "SFProDisplay";
@@ -102,6 +152,43 @@ body {
   width: auto;
   border: 1px solid #83c1fa;
   border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .navigation__link--active {
+    border: none;
+    border-radius: 0;
+  }
+}
+.navigation__close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigation__close {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 15px;
+  }
+}
+.navigation__btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigation__btn {
+    display: block;
+    margin: 0 auto 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    padding-top: 130px;
+    width: 100%;
+    background-color: #303030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 }
 .btn {
   display: flex;
@@ -144,10 +231,36 @@ body {
   position: relative;
   padding-bottom: 220px;
 }
+@media screen and (max-width: 768px) {
+  .start {
+    padding-bottom: 180px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .start {
+    padding-bottom: 110px;
+  }
+}
 .start__wrapper {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+.start__wrapper-img {
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .start__wrapper-img {
+    bottom: 16%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .start__wrapper-img {
+    bottom: 51%;
+  }
 }
 .start__title-mod {
   color: #fff;
@@ -156,10 +269,21 @@ body {
   display: block;
   padding-bottom: 68px;
 }
+@media screen and (max-width: 576px) {
+  .start__title-mod {
+    padding-bottom: 55px;
+    text-shadow: 2px 2px #83c1fa;
+  }
+}
 .start__text {
   position: relative;
   padding-left: 280px;
   max-width: 485px;
+}
+@media screen and (max-width: 576px) {
+  .start__text {
+    padding-left: 165px;
+  }
 }
 .start__text::before {
   display: block;
@@ -171,14 +295,18 @@ body {
   top: 12px;
   left: 0;
 }
-.start__wrapper-img {
-  position: absolute;
-  right: 0;
-  bottom: 3%;
-  z-index: -1;
+@media screen and (max-width: 576px) {
+  .start__text::before {
+    width: 140px;
+  }
 }
 .start__img {
   box-shadow: 6px 6px #83c1fa;
+}
+@media screen and (max-width: 768px) {
+  .start__img {
+    box-shadow: none;
+  }
 }
 .title {
   font-family: "BebasNeue";
@@ -188,6 +316,19 @@ body {
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 2px #8e8e8e;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 110px;
+    line-height: 140px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 57px;
+    line-height: 75px;
+    -webkit-text-stroke: 1px #8e8e8e;
+  }
 }
 .text {
   font-family: "SFProDisplay";
@@ -219,25 +360,72 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  max-width: 590px;
+  max-width: 615px;
+}
+@media screen and (max-width: 768px) {
+  .about__text {
+    max-width: 450px;
+  }
+}
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  .about__wrapper {
+    flex-wrap: wrap;
+  }
 }
 .about__wrapper-top {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 56px;
 }
-.about__wrapper-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (max-width: 576px) {
+  .about__wrapper-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 29px;
+  }
 }
 .about__wrapper-view {
   position: relative;
+}
+@media screen and (max-width: 576px) {
+  .about__info {
+    margin-right: 107px;
+  }
+}
+.about__text {
+  margin-bottom: 56px;
+}
+@media screen and (max-width: 576px) {
+  .about__text {
+    margin-bottom: 40px;
+  }
 }
 .about__view {
   position: absolute;
   right: 56px;
   top: 65px;
+}
+@media screen and (max-width: 576px) {
+  .about__view {
+    display: none;
+  }
+}
+.about__play {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .about__play {
+    display: block;
+    fill: #83c1fa;
+    position: absolute;
+    top: 45%;
+    left: 48%;
+  }
 }
 .info {
   font-family: "BebasNeue";
@@ -266,12 +454,21 @@ body {
   top: -50px;
   left: 0;
 }
+@media screen and (max-width: 576px) {
+  .content {
+    padding-bottom: 110px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 .content__list {
   list-style-type: decimal-leading-zero;
   counter-reset: num;
-  list-style: none;
   margin-bottom: 20px;
-  padding: 0;
 }
 .content__list li {
   counter-increment: num;
@@ -285,7 +482,7 @@ body {
   content: counter(num);
   position: absolute;
   left: -5%;
-  top: 5px;
+  top: 10px;
   font-family: "SFProDisplay";
   font-weight: 500;
   font-size: 20px;
@@ -295,9 +492,19 @@ body {
 .content__list li:nth-child(-n + 9):before {
   content: "0" counter(num);
 }
+@media screen and (max-width: 768px) {
+  .content__info {
+    margin-bottom: 67px;
+  }
+}
 .content__item {
   margin-top: 23px;
   width: 615px;
+}
+@media screen and (max-width: 768px) {
+  .content__item {
+    width: 100%;
+  }
 }
 .content__item-title {
   display: flex;
@@ -309,6 +516,7 @@ body {
   line-height: 24px;
   position: relative;
   color: #fff;
+  padding-top: 5px;
   padding-left: 24px;
   padding-bottom: 11px;
 }
@@ -468,7 +676,7 @@ body {
 }
 .gallery__pagination-current--modteam::after {
   top: 37%;
-  left: 0;
+  left: 13%;
 }
 .gallery__pagination-total {
   font-family: "BebasNeue";
@@ -486,9 +694,9 @@ body {
   top: 30%;
   right: 5%;
 }
-.gallery__pagination-total-modteam {
+.gallery__pagination-total--modteam {
   top: 50%;
-  right: 5%;
+  right: 0;
 }
 .gallery__team {
   display: flex;
@@ -764,9 +972,6 @@ body {
   border: 1px solid #83c1fa;
   border-radius: 50%;
 }
-.footer__email {
-  position: static;
-}
 .footer__link-bottom {
   position: relative;
   color: #fff;
@@ -796,15 +1001,6 @@ body {
   color: #83c1fa;
   padding-left: 280px;
 }
-.email__title-name input {
-  width: 52%;
-}
-.email__title-email input {
-  width: 34%;
-}
-.email__title-text input {
-  width: 36%;
-}
 .email__btn {
   margin-left: 280px;
   margin-bottom: 276px;
@@ -812,7 +1008,7 @@ body {
 .form {
   margin-bottom: 80px;
 }
-.form label {
+.form__title {
   font-family: "BebasNeue";
   font-size: 144px;
   font-weight: 400;
@@ -820,7 +1016,7 @@ body {
   text-align: left;
   color: #fff;
 }
-.form input {
+.form__input {
   font-family: "SFProDisplay";
   font-size: 16px;
   font-weight: 400;
@@ -834,8 +1030,14 @@ body {
   padding-left: 130px;
   padding-bottom: 17px;
 }
-.footer__email {
-  position: relative;
+.form__name {
+  width: 52%;
+}
+.form__email {
+  width: 34%;
+}
+.form__text {
+  width: 36%;
 }
 .grateful {
   width: 100%;

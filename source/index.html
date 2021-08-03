@@ -9,7 +9,7 @@
     <title>Academy Project</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--close">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
           <picture class="picture">
@@ -26,7 +26,17 @@
             <use xlink:href="./img/sprite.svg#day"></use>
           </svg>
         </button>
+        <button class="header__burger">
+          <svg class="header__burger-icon" width="46" height="46">
+            <use xlink:href="./img/sprite.svg#burger"></use>
+          </svg>
+        </button>
         <nav class="header__navigation navigation">
+          <button class="navigation__close">
+            <svg class="navigation__close-icon" width="24" height="24">
+              <use xlink:href="./img/sprite.svg#close"></use>
+            </svg>
+          </button>
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">Обо мне</a>
@@ -38,6 +48,9 @@
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link"> Отзывы </a>
+            </li>
+            <li class="navigation__btn">
+              <button class="navigation__btn btn">Связаться со мной</button>
             </li>
           </ul>
         </nav>
@@ -58,6 +71,16 @@
           </div>
           <div class="start__wrapper-img">
             <picture class="picture">
+              <source
+                media="(max-width: 375px)"
+                srcset="./img/main-mobile.png"
+                srcset="./img/main-mobile@2x.png 2x"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="./img/main-medium.png"
+                srcset="./img/main-medium@2x.png 2x"
+              />
               <img
                 src="./img/main.png"
                 srcset="./img/main@2x.png 2x"
@@ -69,36 +92,64 @@
         </div>
       </section>
       <section class="about">
-        <div class="about__wrapper-top">
-          <p class="about__info info">Обо мне</p>
-          <p class="about__text text">
-            По их почти единодушному мнению, самоактуализация откровенна. Толпа
-            понимает объект. Действие точно аннигилирует генезис.
-            Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
-            почти единодушному мнению, самоактуализация откровенна. Толпа
-            понимает объект. Действие точно аннигилирует генезис.
-            Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-          </p>
-        </div>
-        <div class="about__wrapper-bottom">
-          <picture class="picture">
-            <img
-              src="img/about.png"
-              srcset="./img/about@2x.png 2x"
-              alt="about image"
-              class="about__img"
-            />
-          </picture>
-          <div class="about__wrapper-view">
+        <div class="about__wrapper">
+          <div class="about__wrapper-top">
+            <p class="about__info info">Обо мне</p>
             <picture class="picture">
+              <source
+                media="(max-width: 375px)"
+                srcset="./img/about-mobile.png"
+                srcset="./img/about-mobile@2x.png"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="./img/about-medium.png"
+                srcset="./img/about-medium@2x.png 2x"
+              />
               <img
-                src="img/about-life.jpg"
-                srcset="./img/about-life@2x.jpg 2x"
-                alt="image my life"
-                class="about__img-life"
+                src="img/about.png"
+                srcset="./img/about@2x.png 2x"
+                alt="about image"
+                class="about__img"
               />
             </picture>
-            <button class="about__view btn__circle">Смотреть</button>
+          </div>
+          <div class="about__wrapper-bottom">
+            <p class="about__text text">
+              По их почти единодушному мнению, самоактуализация откровенна.
+              Толпа понимает объект. Действие точно аннигилирует генезис.
+              Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
+              почти единодушному мнению, самоактуализация откровенна. Толпа
+              понимает объект. Действие точно аннигилирует генезис.
+              Самонаблюдение, конечно, притягивает филосовский гомеостаз.
+            </p>
+
+            <div class="about__wrapper-view">
+              <picture class="picture">
+                <source
+                  media="(max-width: 375px)"
+                  srcset="./img/about-life-mobile.jpg"
+                  srcset="./img/about-life-mobile@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./img/about-life-medium.jpg"
+                  srcset="./img/about-life-medium@2x.jpg 2x"
+                />
+                <img
+                  src="img/about-life.jpg"
+                  srcset="./img/about-life@2x.jpg 2x"
+                  alt="image my life"
+                  class="about__img-life"
+                />
+              </picture>
+              <button class="about__play">
+                <svg class="about__play-icon" width="36" height="36">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+              <button class="about__view btn__circle">Смотреть</button>
+            </div>
           </div>
         </div>
       </section>
