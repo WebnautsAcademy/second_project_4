@@ -15,7 +15,13 @@
   &__list {
     list-style-type: decimal-leading-zero;
     counter-reset: num;
+    list-style: none;
     margin-bottom: 20px;
+    padding: 0;
+    @media screen and (max-width: @small) {
+      margin-left: -13px;
+      margin-right: 13px;
+    }
     & li {
       counter-increment: num;
       position: relative;
@@ -32,7 +38,7 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-        color: #colors[list_color];
+        color: #colors[list_dark];
       }
       &:nth-child(-n + 9):before {
         content: "0" counter(num);
@@ -44,13 +50,23 @@
       margin-bottom: 67px;
     }
   }
+  &__icon {
+    &--dark {
+      fill: #colors[icon];
+    }
+    &--light {
+      display: none;
+      fill: #colors[icon_light];
+    }
+  }
 }
 .content__item {
   margin-top: 23px;
   width: 615px;
   @media screen and (max-width: @medium) {
-    width: 100%;
+    width: 95%;
   }
+
   &-title {
     display: flex;
     justify-content: space-between;
@@ -91,9 +107,9 @@
       cursor: pointer;
     }
   }
+
   &-icon {
     margin-right: 5%;
-    fill: #colors[icon];
     transition: 0.3s;
   }
   &-text {

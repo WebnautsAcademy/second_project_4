@@ -12,6 +12,9 @@
       color: #colors[white_text];
 
       padding-top: 16px;
+      @media screen and (max-width: @small) {
+        padding-top: 35px;
+      }
     }
     &-text {
       font-family: @proDisplay;
@@ -24,12 +27,24 @@
   &__wrapper {
     display: flex;
     align-items: baseline;
+    @media screen and (max-width: @small) {
+      display: none;
+    }
     &-img {
       position: relative;
+    }
+    &--hide {
+      display: none;
+      @media screen and (max-width: @small) {
+        display: block;
+      }
     }
   }
   &__item {
     padding-right: 30px;
+    @media screen and (max-width: @small) {
+      padding-right: 0;
+    }
   }
   &__view {
     position: absolute;
@@ -37,6 +52,9 @@
     left: 10%;
     padding-left: 36px;
     padding-right: 36px;
+    @media screen and (max-width: @medium) {
+      display: none;
+    }
   }
   &__play {
     position: absolute;
@@ -44,5 +62,10 @@
     left: 49%;
     fill: #colors[icon_play];
     cursor: pointer;
+
+    @media screen and (max-width: @medium) {
+      top: 37%;
+      left: 48%;
+    }
   }
 }

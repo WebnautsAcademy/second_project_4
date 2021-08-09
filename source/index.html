@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Academy Project</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header header--close">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
@@ -17,13 +17,24 @@
               src="img/logo.png"
               srcset="./img/logo@2x.png 2x"
               alt="logo image"
-              class="logo__img"
+              class="header__logo-dark"
+            />
+          </picture>
+          <picture class="picture">
+            <img
+              src="img/logo-light.png"
+              srcset="./img/logo-light@2x.png 2x"
+              alt="logo image"
+              class="header__logo-light"
             />
           </picture>
         </a>
         <button class="header__switch">
           <svg class="header__switch-icon" width="24" height="24">
             <use xlink:href="./img/sprite.svg#day"></use>
+          </svg>
+          <svg class="header__switch-icon-night" width="24" height="24">
+            <use xlink:href="./img/sprite.svg#night"></use>
           </svg>
         </button>
         <button class="header__burger">
@@ -72,7 +83,7 @@
           <div class="start__wrapper-img">
             <picture class="picture">
               <source
-                media="(max-width: 375px)"
+                media="(max-width: 576px)"
                 srcset="./img/main-mobile.png"
                 srcset="./img/main-mobile@2x.png 2x"
               />
@@ -97,7 +108,7 @@
             <p class="about__info info">Обо мне</p>
             <picture class="picture">
               <source
-                media="(max-width: 375px)"
+                media="(max-width: 576px)"
                 srcset="./img/about-mobile.png"
                 srcset="./img/about-mobile@2x.png"
               />
@@ -127,7 +138,7 @@
             <div class="about__wrapper-view">
               <picture class="picture">
                 <source
-                  media="(max-width: 375px)"
+                  media="(max-width: 576px)"
                   srcset="./img/about-life-mobile.jpg"
                   srcset="./img/about-life-mobile@2x.jpg 2x"
                 />
@@ -159,8 +170,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Увеличение продаж
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -175,8 +197,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Повышение узнаваемости
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -191,8 +224,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Расширение компании
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -207,8 +251,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Что-то еще
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -223,8 +278,19 @@
           <li class="content__item">
             <div class="content__item-title">
               И еще что-то
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -239,8 +305,19 @@
           <li class="content__item">
             <div class="content__item-title">
               И еще одно что-нибудь
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -255,13 +332,13 @@
         </ol>
       </section>
       <section class="gallery">
-        <div class="swiper-container">
+        <div class="swiper-container gallery__slider">
           <h1 class="gallery__title title">Webnauts</h1>
           <div class="gallery__navigation">
             <div class="swiper-button-prev">Назад</div>
             <div class="swiper-button-next">Дальше</div>
           </div>
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper gallery__global-wrapper">
             <div class="swiper-slide">
               <div class="gallery__wrapper">
                 <div class="gallery__pagination">
@@ -270,7 +347,9 @@
                   <span class="gallery__pagination-total">4</span>
                 </div>
                 <div class="gallery__about">
-                  <h4 class="gallery__info info">О проекте</h4>
+                  <h4 class="gallery__info info gallery__info--first">
+                    О проекте
+                  </h4>
                   <div class="gallery__text text">
                     <p class="gallery__text-top">
                       По их почти единодушному мнению, самоактуализация
@@ -294,6 +373,11 @@
                 </div>
                 <div class="gallery__wrapper-img">
                   <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/gallery-first-mobile.png"
+                      srcset="./img/gallery-first-mobile@2x.png 2x"
+                    />
                     <img
                       src="./img/gallery-first.png"
                       srcset="./img/gallery-first@2x.png 2x"
@@ -397,6 +481,11 @@
                 </div>
                 <div class="gallery__wrapper-info">
                   <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/gallery-third-mobile.jpg"
+                      srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                    />
                     <img
                       src="./img/gallery-third.jpg"
                       srcset="./img/gallery-third@2x.jpg 2x"
@@ -405,6 +494,102 @@
                     />
                   </picture>
                   <button class="gallery__btn btn__circle">Смотреть</button>
+                </div>
+                <div class="gallery__wrapper-info gallery__wrapper-info--hide">
+                  <div class="swiper-container gallery__info-slider">
+                    <div class="swiper-wrapper gallery__info-wrapper">
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-container swiper__decor">
@@ -553,8 +738,8 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="gallery__wrapper">
-                <div class="gallery__pagination">
+              <div class="gallery__wrapper-modification">
+                <div class="gallery__pagination-modteam">
                   <span
                     class="
                       gallery__pagination-current
@@ -581,8 +766,14 @@
                     </p>
                   </div>
                 </div>
-                <div class="gallery__wrapper-team">
+
+                <div class="gallery__img-team">
                   <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-2-mobile.jpg"
+                      srcset="./img/team-2-mobile@2x.jpg 2x"
+                    />
                     <img
                       src="./img/team-2.jpg"
                       srcset="./img/team-2@2x.jpg 2x"
@@ -590,7 +781,14 @@
                       class="gallery__img-team"
                     />
                   </picture>
+                </div>
+                <div class="gallery__img-team">
                   <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-1-mobile.jpg"
+                      srcset="./img/team-1-mobile@2x.jpg 2x"
+                    />
                     <img
                       src="./img/team-1.jpg"
                       srcset="./img/team-1@2x.jpg 2x"
@@ -599,45 +797,194 @@
                     />
                   </picture>
                 </div>
+                <div class="gallery__img-team gallery__img-modification">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-3-mobile.jpg"
+                      srcset="./img/team-3-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-3.jpg"
+                      srcset="./img/team-3@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-4-mobile.jpg"
+                      srcset="./img/team-4-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-4.jpg"
+                      srcset="./img/team-4@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-5-mobile.jpg"
+                      srcset="./img/team-5-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-5.jpg"
+                      srcset="./img/team-5@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-6-mobile.jpg"
+                      srcset="./img/team-6-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-6.jpg"
+                      srcset="./img/team-6@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
               </div>
-              <div class="gallery__team">
-                <picture class="picture">
-                  <img
-                    src="./img/team-3.jpg"
-                    srcset="./img/team-3@2x.jpg 2x"
-                    alt="gallery"
-                    class="gallery__img-team"
-                  />
-                </picture>
-                <picture class="picture">
-                  <img
-                    src="./img/team-4.jpg"
-                    srcset="./img/team-4@2x.jpg 2x"
-                    alt="gallery"
-                    class="gallery__img-team"
-                  />
-                </picture>
-                <picture class="picture">
-                  <img
-                    src="./img/team-5.jpg"
-                    srcset="./img/team-5@2x.jpg 2x"
-                    alt="gallery"
-                    class="gallery__img-team"
-                  />
-                </picture>
-                <picture class="picture">
-                  <img
-                    src="./img/team-6.jpg"
-                    srcset="./img/team-6@2x.jpg 2x"
-                    alt="gallery"
-                    class="gallery__img-team"
-                  />
-                </picture>
+
+              <!-- Mobile -->
+              <div
+                class="
+                  gallery__wrapper-modification
+                  gallery__wrapper-modification--hide
+                "
+              >
+                <div class="gallery__about gallery__about--hide">
+                  <h4 class="gallery__info info">Наша команда</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-container gallery__team-slider">
+                  <div class="swiper-wrapper gallery__team-wrapper">
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-2-mobile.jpg"
+                            srcset="./img/team-2-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-2.jpg"
+                            srcset="./img/team-2@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-1-mobile.jpg"
+                            srcset="./img/team-1-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-1.jpg"
+                            srcset="./img/team-1@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team gallery__img-modification">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-3-mobile.jpg"
+                            srcset="./img/team-3-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-3.jpg"
+                            srcset="./img/team-3@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-4-mobile.jpg"
+                            srcset="./img/team-4-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-4.jpg"
+                            srcset="./img/team-4@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-5-mobile.jpg"
+                            srcset="./img/team-5-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-5.jpg"
+                            srcset="./img/team-5@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-6-mobile.jpg"
+                            srcset="./img/team-6-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-6.jpg"
+                            srcset="./img/team-6@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- If we need navigation buttons -->
         </div>
       </section>
       <section class="project">
@@ -758,6 +1105,11 @@
           <div class="review__item review__item-large">
             <div class="review__wrapper-img">
               <picture class="picture">
+                <source
+                  media="(max-width: 576px)"
+                  srcset="./img/review-large-mobile.jpg"
+                  srcset="./img/review-large-mobile@2x.jpg 2x"
+                />
                 <img
                   src="img/review-large.jpg"
                   srcset="./img/review-large@2x.jpg 2x"
@@ -778,6 +1130,11 @@
           <div class="review__item review__item-middle">
             <div class="review__wrapper-img">
               <picture class="picture">
+                <source
+                  media="(max-width: 576px)"
+                  srcset="./img/review-middle-mobile.jpg"
+                  srcset="./img/review-middle-mobile@2x.jpg 2x"
+                />
                 <img
                   src="img/review-middle.jpg"
                   srcset="./img/review-middle@2x.jpg 2x"
@@ -814,6 +1171,88 @@
             <p class="review__info-text">Обувщик</p>
           </div>
         </div>
+        <div class="review__wrapper review__wrapper--hide">
+          <div class="swiper-container review__container-slider">
+            <div class="swiper-wrapper review__wrapper-slider">
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-large">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <source
+                        media="(max-width: 576px)"
+                        srcset="./img/review-large-mobile.jpg"
+                        srcset="./img/review-large-mobile@2x.jpg 2x"
+                      />
+                      <img
+                        src="img/review-large.jpg"
+                        srcset="./img/review-large@2x.jpg 2x"
+                        alt="large image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__view btn__circle">
+                      Смотреть отзыв
+                    </button>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Уилл Смит</p>
+                  <p class="review__info-text">Актер, певец, классный мужик</p>
+                </div>
+              </div>
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-middle">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <source
+                        media="(max-width: 576px)"
+                        srcset="./img/review-middle-mobile.jpg"
+                        srcset="./img/review-middle-mobile@2x.jpg 2x"
+                      />
+                      <img
+                        src="img/review-middle.jpg"
+                        srcset="./img/review-middle@2x.jpg 2x"
+                        alt="middle image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Марк Аврелий</p>
+                  <p class="review__info-text">Римский император, философ</p>
+                </div>
+              </div>
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-smaller">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <img
+                        src="img/review-smaller.jpg"
+                        srcset="./img/review-smaller@2x.jpg 2x"
+                        alt="smaller image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Дядя Ваня</p>
+                  <p class="review__info-text">Обувщик</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -842,7 +1281,7 @@
           <li class="footer__item">
             <div class="footer__item-top">
               <svg
-                class="footer__item-decor footer__item-decor-mod"
+                class="footer__item-decor footer__item-decor--mod"
                 width="38"
                 height="72"
               >

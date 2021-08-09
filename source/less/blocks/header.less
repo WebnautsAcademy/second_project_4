@@ -32,6 +32,9 @@
     @media screen and (max-width: @medium) {
       margin-right: 0;
     }
+    &-light {
+      display: none;
+    }
   }
 
   &__switch {
@@ -45,6 +48,14 @@
       cursor: pointer;
       &:hover {
         fill: #colors[icon_hover];
+      }
+      &-night {
+        display: none;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          fill: #colors[icon_hover];
+        }
       }
     }
   }
