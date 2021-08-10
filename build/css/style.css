@@ -229,17 +229,43 @@ button {
   line-height: 19px;
   text-align: center;
   color: #fff;
-  padding: 6px 19px 9px;
+  position: relative;
 }
-.navigation__link--active {
-  width: auto;
+.navigation__link--active::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 30px;
   border: 1px solid #83c1fa;
   border-radius: 50%;
+  position: absolute;
+  top: -30%;
+  left: -18%;
+  z-index: -1;
 }
-.navigation__link:hover {
-  width: auto;
+.navigation__link:hover::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 30px;
   border: 1px solid #83c1fa;
   border-radius: 50%;
+  position: absolute;
+  top: -30%;
+  left: -18%;
+  z-index: -1;
+}
+.navigation__link--about:hover::before {
+  content: "";
+  width: 90px;
+  height: 30px;
+  left: -24%;
+}
+.navigation__link--review:hover::before {
+  content: "";
+  width: 90px;
+  height: 30px;
+  left: -29%;
 }
 @media screen and (max-width: 768px) {
   .navigation__link--active {
@@ -744,13 +770,19 @@ button {
 }
 @media screen and (max-width: 768px) {
   .gallery__wrapper-modification {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 90px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery__wrapper-modification {
     display: none;
   }
 }
 .gallery__wrapper-modification--hide {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .gallery__wrapper-modification--hide {
     display: block;
   }
@@ -783,6 +815,9 @@ button {
   .gallery__info--first {
     padding-top: 0;
   }
+}
+.gallery__info-slide {
+  width: 296px !important;
 }
 .gallery__text {
   font-family: "SFProDisplay";
@@ -827,7 +862,7 @@ button {
   top: 10%;
   right: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .gallery__navigation {
     display: none;
   }
@@ -954,9 +989,19 @@ button {
     justify-content: flex-start;
   }
 }
+@media screen and (max-width: 768px) {
+  .gallery__img--hide {
+    display: none;
+  }
+}
 @media screen and (max-width: 576px) {
   .gallery__global-wrapper {
     display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery__team-slide--mod {
+    width: 299px !important;
   }
 }
 .swiper-button-prev::after,
@@ -977,6 +1022,12 @@ button {
   letter-spacing: 0em;
   position: static;
   margin-left: 31px;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transition: 0.3s ease-in-out;
+  color: #83c1fa;
+  border-color: #83c1fa;
 }
 .swiper__decor {
   margin-top: 30px;
@@ -1082,6 +1133,15 @@ button {
     display: none;
   }
 }
+@media screen and (max-width: 576px) {
+  .project__slide {
+    width: 270px !important;
+    opacity: 0.5;
+  }
+}
+.swiper-slide-active {
+  opacity: 1;
+}
 .review {
   width: 100%;
   max-width: 1230px;
@@ -1176,6 +1236,21 @@ button {
     left: 48%;
   }
 }
+@media screen and (max-width: 576px) {
+  .review__slide-large {
+    width: 270px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .review__slide-middle {
+    width: 224px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .review__slide-smaller {
+    width: 160px !important;
+  }
+}
 .footer {
   width: 100%;
   max-width: 1230px;
@@ -1266,8 +1341,14 @@ button {
     left: -3%;
   }
 }
+.footer__item-decor--modemail {
+  top: -32%;
+}
+.footer__item-decor--modfacebook {
+  left: 0%;
+}
 @media screen and (max-width: 576px) {
-  .footer__item-decor--mod {
+  .footer__item-decor--modfacebook {
     left: 0%;
   }
 }
@@ -1283,6 +1364,7 @@ button {
   color: #fff;
   padding-left: 36px;
   padding-right: 77px;
+  position: relative;
 }
 @media screen and (max-width: 576px) {
   .footer__link {
@@ -1291,10 +1373,23 @@ button {
 }
 .footer__link:hover {
   color: #83c1fa;
-  padding: 20px 35px 4px;
-  width: auto;
+}
+.footer__link:hover::before {
+  content: "";
+  display: block;
+  width: 230px;
+  height: 80px;
   border: 1px solid #83c1fa;
   border-radius: 50%;
+  position: absolute;
+  top: -17%;
+  z-index: -1;
+  left: 4%;
+}
+.footer__link--email:hover::before {
+  content: "";
+  width: 175px;
+  height: 80px;
 }
 .footer__link-bottom {
   position: relative;

@@ -59,6 +59,7 @@
     // left: -20px;
     margin-bottom: 60px;
     position: relative;
+
     &-decor {
       fill: #colors[list_dark];
       position: absolute;
@@ -69,7 +70,11 @@
         top: -28%;
         left: -3%;
       }
-      &--mod {
+      &--modemail {
+        top: -32%;
+      }
+      &--modfacebook {
+        left: 0%;
         @media screen and (max-width: @small) {
           left: 0%;
         }
@@ -88,13 +93,30 @@
     color: #colors[white_text];
     padding-left: 36px;
     padding-right: 77px;
+    position: relative;
+
     @media screen and (max-width: @small) {
       padding-right: 40px;
     }
     &:hover {
       color: #colors[hover__color];
-      padding: 20px 35px 4px;
-      .ellipse;
+    }
+    &:hover::before {
+      content: "";
+      display: block;
+      width: 230px;
+      height: 80px;
+      border: 1px solid #83c1fa;
+      border-radius: 50%;
+      position: absolute;
+      top: -17%;
+      z-index: -1;
+      left: 4%;
+    }
+    &--email:hover::before {
+      content: "";
+      width: 175px;
+      height: 80px;
     }
     &-bottom {
       position: relative;
