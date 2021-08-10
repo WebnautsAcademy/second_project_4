@@ -1,23 +1,72 @@
 .content {
   .container;
+  .section-decor;
   display: flex;
   justify-content: space-between;
 
   padding-bottom: 234px;
+  @media screen and (max-width: @small) {
+    padding-bottom: 110px;
+  }
+  @media screen and (max-width: @medium) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
   &__list {
     list-style-type: decimal-leading-zero;
+    counter-reset: num;
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    @media screen and (max-width: @small) {
+      margin-left: -13px;
+      margin-right: 13px;
+    }
+    & li {
+      counter-increment: num;
+      position: relative;
+      margin: 5px 0 5px 40px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 20px;
+      &::before {
+        content: counter(num);
+        position: absolute;
+        left: -5%;
+        top: 10px;
+        font-family: @proDisplay;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #colors[list_dark];
+      }
+      &:nth-child(-n + 9):before {
+        content: "0" counter(num);
+      }
+    }
+  }
+  &__info {
+    @media screen and (max-width: @medium) {
+      margin-bottom: 67px;
+    }
+  }
+  &__icon {
+    &--dark {
+      fill: #colors[icon];
+    }
+    &--light {
+      display: none;
+      fill: #colors[icon_light];
+    }
   }
 }
 .content__item {
   margin-top: 23px;
   width: 615px;
-  &::marker {
-    font-family: @proDisplay;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #colors[list_color];
+  @media screen and (max-width: @medium) {
+    width: 95%;
   }
+
   &-title {
     display: flex;
     justify-content: space-between;
@@ -31,6 +80,7 @@
     position: relative;
 
     color: #colors[white_text];
+    padding-top: 5px;
     padding-left: 24px;
     padding-bottom: 11px;
     &::after {
@@ -42,14 +92,24 @@
       left: -5%;
       bottom: 0;
     }
+    &--active {
+      color: #colors[active_color];
+      & svg {
+        transform: rotate(180deg);
+        transition: 0.3s;
+        fill: #colors[icon_active];
+      }
+    }
     &:hover {
       transition: 0.3s ease-in-out;
+
+      color: #colors[hover__color];
       cursor: pointer;
     }
   }
+
   &-icon {
     margin-right: 5%;
-    fill: #colors[icon];
     transition: 0.3s;
   }
   &-text {
@@ -62,14 +122,5 @@
     padding-bottom: 40px;
 
     display: none;
-  }
-}
-.content__item-title--active {
-  color: #colors[active_color];
-
-  & svg {
-    transform: rotate(180deg);
-    transition: 0.3s;
-    fill: #colors[icon_active];
   }
 }

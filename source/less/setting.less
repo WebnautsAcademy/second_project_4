@@ -17,7 +17,83 @@ button {
   border: 0;
   background-color: transparent;
 }
-
-body {
-  background-color: #colors[bg_dark];
+.body {
+  background-color: #colors[dark_theme];
+  &--light-theme {
+    background-color: #colors[light_theme];
+    .btn {
+      color: #colors[black_text];
+    }
+    .navigation__link {
+      color: #colors[black_text];
+    }
+    .title {
+      -webkit-text-stroke: 1px #colors[black_text];
+    }
+    .start__title-mod {
+      color: #colors[black_text];
+    }
+    .start__text::before {
+      background-color: #colors[decor_light];
+    }
+    .text {
+      color: #colors[black_text];
+    }
+    .info {
+      color: #colors[black_text];
+    }
+    .content__item-title {
+      color: #colors[black_text];
+    }
+    .content__list li::before {
+      color: #colors[list_light];
+    }
+    .gallery__title {
+      color: #colors[black_text];
+    }
+    .gallery__pagination-current {
+      color: #colors[gallery_graycurrent];
+    }
+    .gallery__pagination-total {
+      color: #colors[gallery_graytotal];
+    }
+    .gallery__link {
+      color: #colors[black_text];
+    }
+    .gallery__box {
+      border-color: #colors[gallery_borderlight];
+    }
+    .gallery__box-title {
+      color: #colors[gallery_boxtitle];
+    }
+    .gallery__box-text {
+      color: #colors[ black_text];
+    }
+    .gallery__link-icon {
+      fill: #colors[icon_light];
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #colors[black_text];
+      border-color: #colors[black_border];
+    }
+    .project__total {
+      color: #colors[gallery_graytotal];
+    }
+    .review__info-about {
+      color: #colors[black_text];
+    }
+    .footer__link {
+      color: #colors[black_text];
+    }
+    .footer__item-icon {
+      fill: #colors[footer_arrowright];
+    }
+    .footer__item-decor {
+      fill: #colors[footer_icon];
+    }
+    .footer__link-bottom {
+      color: #colors[gray_text];
+    }
+  }
 }

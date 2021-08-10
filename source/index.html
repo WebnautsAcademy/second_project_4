@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>academy project</title>
+    <title>Academy Project</title>
   </head>
-  <body>
-    <header class="header">
+  <body class="body">
+    <header class="header header--close">
       <div class="header__wrapper">
         <a href="#" class="header__logo logo">
           <picture class="picture">
@@ -16,7 +17,15 @@
               src="img/logo.png"
               srcset="./img/logo@2x.png 2x"
               alt="logo image"
-              class="logo__img"
+              class="header__logo-dark"
+            />
+          </picture>
+          <picture class="picture">
+            <img
+              src="img/logo-light.png"
+              srcset="./img/logo-light@2x.png 2x"
+              alt="logo image"
+              class="header__logo-light"
             />
           </picture>
         </a>
@@ -24,24 +33,42 @@
           <svg class="header__switch-icon" width="24" height="24">
             <use xlink:href="./img/sprite.svg#day"></use>
           </svg>
+          <svg class="header__switch-icon-night" width="24" height="24">
+            <use xlink:href="./img/sprite.svg#night"></use>
+          </svg>
+        </button>
+        <button class="header__burger">
+          <svg class="header__burger-icon" width="46" height="46">
+            <use xlink:href="./img/sprite.svg#burger"></use>
+          </svg>
         </button>
         <nav class="header__navigation navigation">
+          <button class="navigation__close">
+            <svg class="navigation__close-icon" width="24" height="24">
+              <use xlink:href="./img/sprite.svg#close"></use>
+            </svg>
+          </button>
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">Обо мне</a>
             </li>
-            <li class="navigation__item navigation__item--active">
-              <a href="#" class="navigation__link"> Мои проекты </a>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--active">
+                Мои проекты
+              </a>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link"> Отзывы </a>
+            </li>
+            <li class="navigation__btn">
+              <button class="navigation__btn btn">Связаться со мной</button>
             </li>
           </ul>
         </nav>
         <button class="header__btn btn">Связаться со мной</button>
       </div>
     </header>
-    <main>
+    <main class="main">
       <section class="start">
         <div class="start__wrapper">
           <div class="start__wrapper-title">
@@ -55,6 +82,16 @@
           </div>
           <div class="start__wrapper-img">
             <picture class="picture">
+              <source
+                media="(max-width: 576px)"
+                srcset="./img/main-mobile.png"
+                srcset="./img/main-mobile@2x.png 2x"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="./img/main-medium.png"
+                srcset="./img/main-medium@2x.png 2x"
+              />
               <img
                 src="./img/main.png"
                 srcset="./img/main@2x.png 2x"
@@ -66,47 +103,86 @@
         </div>
       </section>
       <section class="about">
-        <div class="about__wrapper-top">
-          <p class="about__info info">Обо мне</p>
-          <p class="about__text text">
-            По их почти единодушному мнению, самоактуализация откровенна. Толпа
-            понимает объект. Действие точно аннигилирует генезис.
-            Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
-            почти единодушному мнению, самоактуализация откровенна. Толпа
-            понимает объект. Действие точно аннигилирует генезис.
-            Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-          </p>
-        </div>
-        <div class="about__wrapper-bottom">
-          <picture class="picture">
-            <img
-              src="img/about.png"
-              srcset="./img/about@2x.png 2x"
-              alt="about image"
-              class="about__img"
-            />
-          </picture>
-          <div class="about__wrapper-view">
+        <div class="about__wrapper">
+          <div class="about__wrapper-top">
+            <p class="about__info info">Обо мне</p>
             <picture class="picture">
+              <source
+                media="(max-width: 576px)"
+                srcset="./img/about-mobile.png"
+                srcset="./img/about-mobile@2x.png"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="./img/about-medium.png"
+                srcset="./img/about-medium@2x.png 2x"
+              />
               <img
-                src="img/about-life.jpg"
-                srcset="./img/about-life@2x.jpg 2x"
-                alt="image my life"
-                class="about__img-life"
+                src="img/about.png"
+                srcset="./img/about@2x.png 2x"
+                alt="about image"
+                class="about__img"
               />
             </picture>
-            <button class="about__view btn__circle">Смотреть</button>
+          </div>
+          <div class="about__wrapper-bottom">
+            <p class="about__text text">
+              По их почти единодушному мнению, самоактуализация откровенна.
+              Толпа понимает объект. Действие точно аннигилирует генезис.
+              Самонаблюдение, конечно, притягивает филосовский гомеостаз. По их
+              почти единодушному мнению, самоактуализация откровенна. Толпа
+              понимает объект. Действие точно аннигилирует генезис.
+              Самонаблюдение, конечно, притягивает филосовский гомеостаз.
+            </p>
+
+            <div class="about__wrapper-view">
+              <picture class="picture">
+                <source
+                  media="(max-width: 576px)"
+                  srcset="./img/about-life-mobile.jpg"
+                  srcset="./img/about-life-mobile@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./img/about-life-medium.jpg"
+                  srcset="./img/about-life-medium@2x.jpg 2x"
+                />
+                <img
+                  src="img/about-life.jpg"
+                  srcset="./img/about-life@2x.jpg 2x"
+                  alt="image my life"
+                  class="about__img-life"
+                />
+              </picture>
+              <button class="about__play">
+                <svg class="about__play-icon" width="36" height="36">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+              <button class="about__view btn__circle">Смотреть</button>
+            </div>
           </div>
         </div>
       </section>
       <section class="content">
         <p class="content__info info">Основные специализации</p>
-        <ul class="content__list">
+        <ol class="content__list">
           <li class="content__item">
             <div class="content__item-title">
               Увеличение продаж
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -121,8 +197,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Повышение узнаваемости
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -137,8 +224,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Расширение компании
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -153,8 +251,19 @@
           <li class="content__item">
             <div class="content__item-title">
               Что-то еще
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -169,8 +278,19 @@
           <li class="content__item">
             <div class="content__item-title">
               И еще что-то
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -185,8 +305,19 @@
           <li class="content__item">
             <div class="content__item-title">
               И еще одно что-нибудь
-              <svg class="content__item-icon" width="30" height="30">
-                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              <svg
+                class="content__item-icon content__icon--dark"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-dark"></use>
+              </svg>
+              <svg
+                class="content__item-icon content__icon--light"
+                width="30"
+                height="30"
+              >
+                <use xlink:href="./img/sprite.svg#arrow-down-light"></use>
               </svg>
             </div>
             <p class="content__item-text text">
@@ -198,128 +329,773 @@
               Самонаблюдение, конечно, притягивает филосовский гомеостаз.
             </p>
           </li>
-        </ul>
+        </ol>
       </section>
       <section class="gallery">
-        <h1 class="gallery__title title">Webnauts</h1>
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="gallery__wrapper">
-                <div class="gallery__about">
-                  <h4 class="gallery__info info">О проекте</h4>
-                  <div class="gallery__text text">
-                    <p class="gallery__text-top">
-                      По их почти единодушному мнению, самоактуализация
-                      откровенна. Толпа понимает объект. Действие точно
-                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
-                      филосовский гомеостаз.
-                    </p>
-                    <p class="gallery__text-bottom">
-                      По их почти единодушному мнению, самоактуализация
-                      откровенна. Толпа понимает объект. Действие точно
-                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
-                      филосовский гомеостаз.
-                    </p>
-                    <a href="#" class="gallery__link">
-                      <svg class="gallery__link-icon" width="24" height="24">
-                        <use xlink:href="./img/sprite.svg#link"></use>
-                      </svg>
-                      webnauts.pro</a
-                    >
-                  </div>
-                </div>
-                <div class="gallery__wrapper-img">
-                  <picture class="picture">
-                    <img
-                      src="./img/gallery-first.png"
-                      srcset="./img/gallery-first@2x.png 2x"
-                      alt="gallery"
-                      class="gallery__img"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery__wrapper">
-                <div class="gallery__about">
-                  <h4 class="gallery__info info">О проекте</h4>
-                  <div class="gallery__text text">
-                    <p class="gallery__text-top">
-                      По их почти единодушному мнению, самоактуализация
-                      откровенна. Толпа понимает объект. Действие точно
-                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
-                      филосовский гомеостаз.
-                    </p>
-                    <p class="gallery__text-bottom">
-                      По их почти единодушному мнению, самоактуализация
-                      откровенна. Толпа понимает объект. Действие точно
-                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
-                      филосовский гомеостаз.
-                    </p>
-                    <a href="#" class="gallery__link">
-                      <svg class="gallery__link-icon" width="24" height="24">
-                        <use xlink:href="./img/sprite.svg#link"></use>
-                      </svg>
-                      webnauts.pro</a
-                    >
-                  </div>
-                </div>
-                <div class="gallery__wrapper-img">
-                  <picture class="picture">
-                    <img
-                      src="./img/gallery-first.png"
-                      srcset="./img/gallery-first@2x.png 2x"
-                      alt="gallery"
-                      class="gallery__img"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
+        <div class="swiper-container gallery__slider">
+          <h1 class="gallery__title title">Webnauts</h1>
+          <div class="gallery__navigation">
+            <div class="swiper-button-prev">Назад</div>
+            <div class="swiper-button-next">Дальше</div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper gallery__global-wrapper">
+            <div class="swiper-slide">
+              <div class="gallery__wrapper">
+                <div class="gallery__pagination">
+                  <span class="gallery__pagination-current">1</span>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+                  <span class="gallery__pagination-total">4</span>
+                </div>
+                <div class="gallery__about">
+                  <h4 class="gallery__info info gallery__info--first">
+                    О проекте
+                  </h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <p class="gallery__text-bottom">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <a href="#" class="gallery__link">
+                      <svg class="gallery__link-icon" width="24" height="24">
+                        <use xlink:href="./img/sprite.svg#link"></use>
+                      </svg>
+                      webnauts.pro</a
+                    >
+                  </div>
+                </div>
+                <div class="gallery__wrapper-img">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/gallery-first-mobile.png"
+                      srcset="./img/gallery-first-mobile@2x.png 2x"
+                    />
+                    <img
+                      src="./img/gallery-first.png"
+                      srcset="./img/gallery-first@2x.png 2x"
+                      alt="gallery"
+                      class="gallery__img"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery__wrapper">
+                <div class="gallery__pagination">
+                  <span class="gallery__pagination-current">2</span>
 
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+                  <span class="gallery__pagination-total">4</span>
+                </div>
+                <div class="gallery__about">
+                  <h4 class="gallery__info info">Основные Результаты</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                      филосовский гомеостаз.
+                    </p>
+                    <p class="gallery__text-bottom">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис.
+                    </p>
+                  </div>
+                </div>
+                <div class="gallery__wrapper-content">
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                  <div class="gallery__box">
+                    <div class="gallery__box-title">300</div>
+                    <p class="gallery__box-text">
+                      Тут может быть какое-то описание в 2 строки
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery__wrapper">
+                <div class="gallery__pagination">
+                  <span
+                    class="
+                      gallery__pagination-current
+                      gallery__pagination-current--mod
+                    "
+                    >3</span
+                  >
+
+                  <span
+                    class="
+                      gallery__pagination-total gallery__pagination-total--mod
+                    "
+                    >4</span
+                  >
+                </div>
+                <div class="gallery__about">
+                  <h4 class="gallery__info info">Показатели роста</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис.
+                    </p>
+                  </div>
+                </div>
+                <div class="gallery__wrapper-info">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/gallery-third-mobile.jpg"
+                      srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/gallery-third.jpg"
+                      srcset="./img/gallery-third@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img"
+                    />
+                  </picture>
+                  <button class="gallery__btn btn__circle">Смотреть</button>
+                </div>
+                <div class="gallery__wrapper-info gallery__wrapper-info--hide">
+                  <div class="swiper-container gallery__info-slider">
+                    <div class="swiper-wrapper gallery__info-wrapper">
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-container swiper__decor">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor.jpg"
+                        srcset="./img/gallery-decor@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide swiper__decor-slide">
+                    <picture class="picture">
+                      <img
+                        src="./img/gallery-decor-second.jpg"
+                        srcset="./img/gallery-decor-second@2x.jpg 2x"
+                        alt="gallery"
+                        class="gallery__img"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery__wrapper-modification">
+                <div class="gallery__pagination-modteam">
+                  <span
+                    class="
+                      gallery__pagination-current
+                      gallery__pagination-current--modteam
+                    "
+                    >4</span
+                  >
+
+                  <span
+                    class="
+                      gallery__pagination-total
+                      gallery__pagination-total--modteam
+                    "
+                    >4</span
+                  >
+                </div>
+                <div class="gallery__about">
+                  <h4 class="gallery__info info">Наша команда</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-2-mobile.jpg"
+                      srcset="./img/team-2-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-2.jpg"
+                      srcset="./img/team-2@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-1-mobile.jpg"
+                      srcset="./img/team-1-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-1.jpg"
+                      srcset="./img/team-1@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team gallery__img-modification">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-3-mobile.jpg"
+                      srcset="./img/team-3-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-3.jpg"
+                      srcset="./img/team-3@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-4-mobile.jpg"
+                      srcset="./img/team-4-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-4.jpg"
+                      srcset="./img/team-4@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-5-mobile.jpg"
+                      srcset="./img/team-5-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-5.jpg"
+                      srcset="./img/team-5@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__img-team">
+                  <picture class="picture">
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./img/team-6-mobile.jpg"
+                      srcset="./img/team-6-mobile@2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/team-6.jpg"
+                      srcset="./img/team-6@2x.jpg 2x"
+                      alt="gallery"
+                      class="gallery__img-team"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Mobile -->
+              <div
+                class="
+                  gallery__wrapper-modification
+                  gallery__wrapper-modification--hide
+                "
+              >
+                <div class="gallery__about gallery__about--hide">
+                  <h4 class="gallery__info info">Наша команда</h4>
+                  <div class="gallery__text text">
+                    <p class="gallery__text-top">
+                      По их почти единодушному мнению, самоактуализация
+                      откровенна. Толпа понимает объект. Действие точно
+                      аннигилирует генезис.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-container gallery__team-slider">
+                  <div class="swiper-wrapper gallery__team-wrapper">
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-2-mobile.jpg"
+                            srcset="./img/team-2-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-2.jpg"
+                            srcset="./img/team-2@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-1-mobile.jpg"
+                            srcset="./img/team-1-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-1.jpg"
+                            srcset="./img/team-1@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team gallery__img-modification">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-3-mobile.jpg"
+                            srcset="./img/team-3-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-3.jpg"
+                            srcset="./img/team-3@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-4-mobile.jpg"
+                            srcset="./img/team-4-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-4.jpg"
+                            srcset="./img/team-4@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-5-mobile.jpg"
+                            srcset="./img/team-5-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-5.jpg"
+                            srcset="./img/team-5@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide gallery__team-slide">
+                      <div class="gallery__img-team">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/team-6-mobile.jpg"
+                            srcset="./img/team-6-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/team-6.jpg"
+                            srcset="./img/team-6@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img-team"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="project">
-        <p class="project__info info">Другие проекты</p>
-        <div class="project__wrapper">
-          <div class="project__logo">
-            <picture class="picture">
-              <img
-                src="img/project-logo.png"
-                srcset="./img/project-logo@2x.png 2x"
-                alt="project logo"
-                class="project__logo"
-              />
-            </picture>
+        <div class="project__wrapper-title">
+          <p class="project__info info">Другие проекты</p>
+        </div>
+        <div class="swiper-container project-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="project__wrapper">
+                <div class="project__logo">
+                  <picture class="picture">
+                    <img
+                      src="img/project-logo.png"
+                      srcset="./img/project-logo@2x.png 2x"
+                      alt="project logo"
+                      class="project__logo"
+                    />
+                  </picture>
+                  <div class="project__counter">
+                    <span class="project__total">01</span>
+                  </div>
+                </div>
+                <div class="project__text text">
+                  <p class="project__text-top">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                    филосовский гомеостаз.
+                  </p>
+                  <p class="project__text-bottom">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. По их почти единодушному мнению,
+                    самоактуализация откровенна. Толпа понимает объект. Действие
+                    точно аннигилирует генезис. Самонаблюдение, конечно,
+                    притягивает филосовский гомеостаз.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__wrapper">
+                <div class="project__logo">
+                  <picture class="picture">
+                    <img
+                      src="img/project-logo.png"
+                      srcset="./img/project-logo@2x.png 2x"
+                      alt="project logo"
+                      class="project__logo"
+                    />
+                  </picture>
+                  <div class="project__counter">
+                    <span class="project__total">01</span>
+                  </div>
+                </div>
+                <div class="project__text text">
+                  <p class="project__text-top">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                    филосовский гомеостаз.
+                  </p>
+                  <p class="project__text-bottom">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. По их почти единодушному мнению,
+                    самоактуализация откровенна. Толпа понимает объект. Действие
+                    точно аннигилирует генезис. Самонаблюдение, конечно,
+                    притягивает филосовский гомеостаз.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__wrapper">
+                <div class="project__logo">
+                  <picture class="picture">
+                    <img
+                      src="img/project-logo.png"
+                      srcset="./img/project-logo@2x.png 2x"
+                      alt="project logo"
+                      class="project__logo"
+                    />
+                  </picture>
+                  <div class="project__counter">
+                    <span class="project__total">01</span>
+                  </div>
+                </div>
+                <div class="project__text text">
+                  <p class="project__text-top">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. Самонаблюдение, конечно, притягивает
+                    филосовский гомеостаз.
+                  </p>
+                  <p class="project__text-bottom">
+                    По их почти единодушному мнению, самоактуализация
+                    откровенна. Толпа понимает объект. Действие точно
+                    аннигилирует генезис. По их почти единодушному мнению,
+                    самоактуализация откровенна. Толпа понимает объект. Действие
+                    точно аннигилирует генезис. Самонаблюдение, конечно,
+                    притягивает филосовский гомеостаз.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project__text text">
-            <p class="project__text-top">
-              По их почти единодушному мнению, самоактуализация откровенна.
-              Толпа понимает объект. Действие точно аннигилирует генезис.
-              Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-            </p>
-            <p class="project__text-bottom">
-              По их почти единодушному мнению, самоактуализация откровенна.
-              Толпа понимает объект. Действие точно аннигилирует генезис. По их
-              почти единодушному мнению, самоактуализация откровенна. Толпа
-              понимает объект. Действие точно аннигилирует генезис.
-              Самонаблюдение, конечно, притягивает филосовский гомеостаз.
-            </p>
+          <div class="project__navigation">
+            <div class="swiper-button-prev">Назад</div>
+            <div class="swiper-button-next">Далее</div>
           </div>
         </div>
       </section>
@@ -329,6 +1105,11 @@
           <div class="review__item review__item-large">
             <div class="review__wrapper-img">
               <picture class="picture">
+                <source
+                  media="(max-width: 576px)"
+                  srcset="./img/review-large-mobile.jpg"
+                  srcset="./img/review-large-mobile@2x.jpg 2x"
+                />
                 <img
                   src="img/review-large.jpg"
                   srcset="./img/review-large@2x.jpg 2x"
@@ -349,6 +1130,11 @@
           <div class="review__item review__item-middle">
             <div class="review__wrapper-img">
               <picture class="picture">
+                <source
+                  media="(max-width: 576px)"
+                  srcset="./img/review-middle-mobile.jpg"
+                  srcset="./img/review-middle-mobile@2x.jpg 2x"
+                />
                 <img
                   src="img/review-middle.jpg"
                   srcset="./img/review-middle@2x.jpg 2x"
@@ -385,48 +1171,148 @@
             <p class="review__info-text">Обувщик</p>
           </div>
         </div>
+        <div class="review__wrapper review__wrapper--hide">
+          <div class="swiper-container review__container-slider">
+            <div class="swiper-wrapper review__wrapper-slider">
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-large">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <source
+                        media="(max-width: 576px)"
+                        srcset="./img/review-large-mobile.jpg"
+                        srcset="./img/review-large-mobile@2x.jpg 2x"
+                      />
+                      <img
+                        src="img/review-large.jpg"
+                        srcset="./img/review-large@2x.jpg 2x"
+                        alt="large image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__view btn__circle">
+                      Смотреть отзыв
+                    </button>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Уилл Смит</p>
+                  <p class="review__info-text">Актер, певец, классный мужик</p>
+                </div>
+              </div>
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-middle">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <source
+                        media="(max-width: 576px)"
+                        srcset="./img/review-middle-mobile.jpg"
+                        srcset="./img/review-middle-mobile@2x.jpg 2x"
+                      />
+                      <img
+                        src="img/review-middle.jpg"
+                        srcset="./img/review-middle@2x.jpg 2x"
+                        alt="middle image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Марк Аврелий</p>
+                  <p class="review__info-text">Римский император, философ</p>
+                </div>
+              </div>
+              <div class="swiper-slide review-slide">
+                <div class="review__item review__item-smaller">
+                  <div class="review__wrapper-img">
+                    <picture class="picture">
+                      <img
+                        src="img/review-smaller.jpg"
+                        srcset="./img/review-smaller@2x.jpg 2x"
+                        alt="smaller image"
+                        class="review__img"
+                      />
+                    </picture>
+                    <button class="review__play">
+                      <svg class="review__play-icon" width="36" height="36">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="review__info-about">Дядя Ваня</p>
+                  <p class="review__info-text">Обувщик</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__info info">Напишите мне</p>
       <div class="footer__wrapper">
-        <p class="footer__text text">
-          Проконсультирую по любым вопросам, связанным с масштабированием
-          бизнеса
-        </p>
+        <div class="footer__wrapper-title">
+          <p class="footer__info info">Напишите мне</p>
+          <p class="footer__text text">
+            Проконсультирую по любым вопросам, связанным с масштабированием
+            бизнеса
+          </p>
+        </div>
         <ul class="footer__list">
           <li class="footer__item">
-            <svg class="footer__item-icon" width="86" height="86">
-              <use xlink:href="./img/sprite.svg#email"></use>
-            </svg>
-            <a class="footer__link" href="#">E-mail</a>
-            <svg class="footer__item-icon" width="43" height="43">
-              <use xlink:href="./img/sprite.svg#arrow-right"></use>
-            </svg>
+            <div class="footer__item-top">
+              <svg class="footer__item-decor" width="86" height="86">
+                <use xlink:href="./img/sprite.svg#email"></use>
+              </svg>
+              <a class="footer__link" href="email.html">E-mail</a>
+            </div>
+            <div class="footer__item-bottom">
+              <svg class="footer__item-icon" width="43" height="43">
+                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
           </li>
           <li class="footer__item">
-            <svg class="footer__item-icon" width="86" height="86">
-              <use xlink:href="./img/sprite.svg#facebook"></use>
-            </svg>
-            <a class="footer__link" href="#">Facebook</a>
-            <svg class="footer__item-icon" width="43" height="43">
-              <use xlink:href="./img/sprite.svg#arrow-right"></use>
-            </svg>
+            <div class="footer__item-top">
+              <svg
+                class="footer__item-decor footer__item-decor--mod"
+                width="38"
+                height="72"
+              >
+                <use xlink:href="./img/sprite.svg#facebook"></use>
+              </svg>
+              <a class="footer__link" href="#">Facebook</a>
+            </div>
+            <div class="footer__item-bottom">
+              <svg class="footer__item-icon" width="43" height="43">
+                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
           </li>
           <li class="footer__item">
-            <svg class="footer__item-icon" width="86" height="86">
-              <use xlink:href="./img/sprite.svg#telegram"></use>
-            </svg>
-            <a class="footer__link" href="#">Telegram</a>
-            <svg class="footer__item-icon" width="43" height="43">
-              <use xlink:href="./img/sprite.svg#arrow-right"></use>
-            </svg>
+            <div class="footer__item-top">
+              <svg class="footer__item-decor" width="74" height="62">
+                <use xlink:href="./img/sprite.svg#telegram"></use>
+              </svg>
+              <a class="footer__link" href="#">Telegram</a>
+            </div>
+            <div class="footer__item-bottom">
+              <svg class="footer__item-icon" width="43" height="43">
+                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
           </li>
         </ul>
       </div>
       <div class="footer__wrapper-bottom">
-        <a class="footer__link" href="#">2020. Все права защищены</a>
-        <a class="footer__link footer__link-decor" href="#"
+        <a class="footer__link-bottom" href="#">2020. Все права защищены</a>
+        <a class="footer__link-bottom footer__link-decor" href="#"
           >Политика конфиденциальности</a
         >
       </div>

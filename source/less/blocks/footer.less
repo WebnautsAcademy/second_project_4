@@ -1,9 +1,17 @@
 .footer {
   .container;
+  .section-decor;
 
   &__wrapper {
     display: flex;
-    padding-bottom: 206px;
+    margin-bottom: 206px;
+    @media screen and (max-width: @small) {
+      flex-wrap: wrap;
+      margin-bottom: 90px;
+    }
+    // @media screen and (max-width: @medium) {
+    //   margin-bottom: 64px;
+    // }
     &-bottom {
       display: flex;
       justify-content: space-between;
@@ -16,6 +24,9 @@
       opacity: 0.54;
 
       margin-bottom: 59px;
+      @media screen and (max-width: @small) {
+        flex-wrap: wrap;
+      }
     }
   }
   &__info {
@@ -26,12 +37,10 @@
     color: #colors[white_text];
     opacity: 0.4;
     margin-right: 211px;
-  }
-  &__item {
-    max-width: 178px;
-    padding-bottom: 60px;
-    &-icon {
-      fill: #colors[icon_footer];
+    @media screen and (max-width: @small) {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 64px;
     }
   }
   &__list {
@@ -39,11 +48,61 @@
     font-weight: 700;
     font-size: 56px;
     line-height: 56px;
+    @media screen and (max-width: @small) {
+      margin-left: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // left: -20px;
+    margin-bottom: 60px;
+    position: relative;
+    &-decor {
+      fill: #colors[list_dark];
+      position: absolute;
+      top: -25%;
+      left: -7%;
+      z-index: -1;
+      @media screen and (max-width: @small) {
+        top: -28%;
+        left: -3%;
+      }
+      &--mod {
+        @media screen and (max-width: @small) {
+          left: 0%;
+        }
+      }
+    }
+    &-icon {
+      fill: #colors[list_dark];
+    }
+    &:hover .footer__item-icon {
+      transform: translateX(14px);
+      transition: 0.3s ease-in-out;
+      fill: #colors[hover__color];
+    }
   }
   &__link {
     color: #colors[white_text];
-    position: relative;
-
+    padding-left: 36px;
+    padding-right: 77px;
+    @media screen and (max-width: @small) {
+      padding-right: 40px;
+    }
+    &:hover {
+      color: #colors[hover__color];
+      padding: 20px 35px 4px;
+      .ellipse;
+    }
+    &-bottom {
+      position: relative;
+      color: #colors[white_text];
+      @media screen and (max-width: @small) {
+        padding-bottom: 14px;
+      }
+    }
     &-decor::after {
       display: block;
       content: "";
@@ -55,6 +114,3 @@
     }
   }
 }
-// .footer__link::before {
-//   background-image: url("../img/facebook.svg");
-// }

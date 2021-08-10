@@ -1,19 +1,67 @@
 .project {
   .container;
+  .section-decor;
   display: flex;
   justify-content: space-between;
+
   padding-bottom: 220px;
+  @media screen and (max-width: @small) {
+    padding-bottom: 160px;
+  }
+  @media screen and (max-width: @medium) {
+    flex-wrap: wrap;
+  }
+  &-swiper {
+    padding-bottom: 149px;
+    @media screen and (max-width: @small) {
+      padding-bottom: 0;
+    }
+  }
   &__wrapper {
     max-width: 640px;
   }
   &__logo {
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__text {
     font-family: @proDisplay;
     font-weight: 400;
+
+    margin-top: 40px;
     &-bottom {
       padding-top: 30px;
+    }
+  }
+  &__info {
+    width: 100%;
+    margin-right: 465px;
+    @media screen and (max-width: @small) {
+      margin-bottom: 64px;
+    }
+    @media screen and (max-width: @medium) {
+      margin-bottom: 64px;
+    }
+  }
+  &__total {
+    font-family: @bebasNeue;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    text-align: left;
+    color: #colors[gallery_text];
+    @media screen and (max-width: @small) {
+      display: none;
+    }
+  }
+  &__navigation {
+    display: flex;
+    position: absolute;
+    left: -2.8%;
+    bottom: 0;
+    @media screen and (max-width: @small) {
+      display: none;
     }
   }
 }
