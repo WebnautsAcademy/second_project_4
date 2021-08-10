@@ -1102,6 +1102,7 @@ button {
 @media screen and (max-width: 576px) {
   .project__info {
     margin-bottom: 64px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 768px) {
