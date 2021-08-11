@@ -112,15 +112,17 @@ if(document.documentElement.clientWidth <= 768){
   });
 }
 if(document.documentElement.clientWidth <= 576) {
-  const swiperMobileInfo = new Swiper('.gallery__info-slider',{
+  const swiperMobileInfo = new Swiper('.gallery__info-slider',{    
     slidesPerView: 2,
     spaceBetween: 30,
   });
-  const swiperMobileTeam = new Swiper('.gallery__team-slider', {   
+  const swiperMobileTeam = new Swiper('.gallery__team-slider', {     
     slidesPerView: 2,
     spaceBetween: 30,
   });
   const swiperProject = new Swiper(".project-swiper", {
+    loop: true,
+    centeredSlides: true,
     slidesPerView: 2,
     spaceBetween: 30,
   });

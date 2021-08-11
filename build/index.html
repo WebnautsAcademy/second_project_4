@@ -50,7 +50,9 @@
           </button>
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Обо мне</a>
+              <a href="#" class="navigation__link navigation__link--about"
+                >Обо мне</a
+              >
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link navigation__link--active">
@@ -58,7 +60,9 @@
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link"> Отзывы </a>
+              <a href="#" class="navigation__link navigation__link--review">
+                Отзывы
+              </a>
             </li>
             <li class="navigation__btn">
               <button class="navigation__btn btn">Связаться со мной</button>
@@ -498,7 +502,7 @@
                 <div class="gallery__wrapper-info gallery__wrapper-info--hide">
                   <div class="swiper-container gallery__info-slider">
                     <div class="swiper-wrapper gallery__info-wrapper">
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -513,7 +517,7 @@
                           />
                         </picture>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -528,7 +532,7 @@
                           />
                         </picture>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -543,7 +547,7 @@
                           />
                         </picture>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -558,7 +562,7 @@
                           />
                         </picture>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -573,7 +577,82 @@
                           />
                         </picture>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide gallery__info-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide gallery__info-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide gallery__info-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide gallery__info-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide gallery__info-slide">
+                        <picture class="picture">
+                          <source
+                            media="(max-width: 576px)"
+                            srcset="./img/gallery-third-mobile.jpg"
+                            srcset="./img/gallery-third-mobile@2x.jpg 2x"
+                          />
+                          <img
+                            src="./img/gallery-third.jpg"
+                            srcset="./img/gallery-third@2x.jpg 2x"
+                            alt="gallery"
+                            class="gallery__img"
+                          />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide gallery__info-slide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -842,7 +921,7 @@
                     />
                   </picture>
                 </div>
-                <div class="gallery__img-team">
+                <div class="gallery__img-team gallery__img--hide">
                   <picture class="picture">
                     <source
                       media="(max-width: 576px)"
@@ -878,7 +957,12 @@
                 </div>
                 <div class="swiper-container gallery__team-slider">
                   <div class="swiper-wrapper gallery__team-wrapper">
-                    <div class="swiper-slide gallery__team-slide">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
                       <div class="gallery__img-team">
                         <picture class="picture">
                           <source
@@ -895,7 +979,12 @@
                         </picture>
                       </div>
                     </div>
-                    <div class="swiper-slide gallery__team-slide">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
                       <div class="gallery__img-team">
                         <picture class="picture">
                           <source
@@ -912,7 +1001,12 @@
                         </picture>
                       </div>
                     </div>
-                    <div class="swiper-slide gallery__team-slide">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
                       <div class="gallery__img-team gallery__img-modification">
                         <picture class="picture">
                           <source
@@ -929,7 +1023,12 @@
                         </picture>
                       </div>
                     </div>
-                    <div class="swiper-slide gallery__team-slide">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
                       <div class="gallery__img-team">
                         <picture class="picture">
                           <source
@@ -946,7 +1045,12 @@
                         </picture>
                       </div>
                     </div>
-                    <div class="swiper-slide gallery__team-slide">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
                       <div class="gallery__img-team">
                         <picture class="picture">
                           <source
@@ -963,8 +1067,13 @@
                         </picture>
                       </div>
                     </div>
-                    <div class="swiper-slide gallery__team-slide">
-                      <div class="gallery__img-team">
+                    <div
+                      class="
+                        swiper-slide
+                        gallery__team-slide gallery__team-slide--mod
+                      "
+                    >
+                      <div class="gallery__img-team gallery__img--hide">
                         <picture class="picture">
                           <source
                             media="(max-width: 576px)"
@@ -993,7 +1102,7 @@
         </div>
         <div class="swiper-container project-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide project__slide">
               <div class="project__wrapper">
                 <div class="project__logo">
                   <picture class="picture">
@@ -1026,7 +1135,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide project__slide">
               <div class="project__wrapper">
                 <div class="project__logo">
                   <picture class="picture">
@@ -1059,7 +1168,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide project__slide">
               <div class="project__wrapper">
                 <div class="project__logo">
                   <picture class="picture">
@@ -1174,7 +1283,7 @@
         <div class="review__wrapper review__wrapper--hide">
           <div class="swiper-container review__container-slider">
             <div class="swiper-wrapper review__wrapper-slider">
-              <div class="swiper-slide review-slide">
+              <div class="swiper-slide review__slide-large">
                 <div class="review__item review__item-large">
                   <div class="review__wrapper-img">
                     <picture class="picture">
@@ -1203,7 +1312,7 @@
                   <p class="review__info-text">Актер, певец, классный мужик</p>
                 </div>
               </div>
-              <div class="swiper-slide review-slide">
+              <div class="swiper-slide review__slide-middle">
                 <div class="review__item review__item-middle">
                   <div class="review__wrapper-img">
                     <picture class="picture">
@@ -1229,7 +1338,7 @@
                   <p class="review__info-text">Римский император, философ</p>
                 </div>
               </div>
-              <div class="swiper-slide review-slide">
+              <div class="swiper-slide review__slide-smaller">
                 <div class="review__item review__item-smaller">
                   <div class="review__wrapper-img">
                     <picture class="picture">
@@ -1267,10 +1376,16 @@
         <ul class="footer__list">
           <li class="footer__item">
             <div class="footer__item-top">
-              <svg class="footer__item-decor" width="86" height="86">
+              <svg
+                class="footer__item-decor footer__item-decor--modemail"
+                width="86"
+                height="86"
+              >
                 <use xlink:href="./img/sprite.svg#email"></use>
               </svg>
-              <a class="footer__link" href="email.html">E-mail</a>
+              <a class="footer__link footer__link--email" href="email.html"
+                >E-mail</a
+              >
             </div>
             <div class="footer__item-bottom">
               <svg class="footer__item-icon" width="43" height="43">
@@ -1281,7 +1396,7 @@
           <li class="footer__item">
             <div class="footer__item-top">
               <svg
-                class="footer__item-decor footer__item-decor--mod"
+                class="footer__item-decor footer__item-decor--modfacebook"
                 width="38"
                 height="72"
               >
